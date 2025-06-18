@@ -1,0 +1,133 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+}
+
+.tituloClassificacao {
+    color: #004A96;
+    font-weight: bold;
+    margin: 20px 0;
+    width: 100%;
+    text-align: center;
+}
+
+.todosProdutos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px 40px;
+    width: 100%;
+}
+
+.produto {
+    width: 100%;
+    overflow: hidden;
+    background-color: #f2f2f2;
+    box-shadow: 5px 5px 10px 3px rgb(218, 214, 214);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 20px 0;
+}
+
+.titulo {
+    background-color: #004a96;
+    color: #fff;
+    font-size: 16px;
+    padding: 15px;
+    width: 90%;
+    display: block;
+    position: relative;
+    align-self: flex-end;
+}
+
+.descricao {
+    width: 80%;
+    height: 320px;
+    margin: 20px 0 30px 0;
+    text-align: justify;
+    word-wrap: break-word;
+    hyphens: auto;
+    font-size: 12px;
+}
+
+.btnInteresse {
+    border: none;
+    font-size: 13px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px;
+    width: 60%;
+    background-color: #004a96;
+}
+
+@media (min-width: 800px) {
+
+    .tituloClassificacao {
+        font-size: 24px;
+        width: 95%;
+        text-align: left;
+    }
+
+    .todosProdutos {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 40px 40px;
+        width: 100%;
+        margin: 0 0 80px 0;
+
+    }
+
+    .produto {
+        margin: 0;
+        width: 30%;
+        height: 600px;
+    }
+
+    .descricao {
+        font-size: 14px;
+        max-width: 80%;
+        height: 400px;
+        width: 80%;
+    }
+
+}
+
+@media (min-width: 1300px) {
+
+    .tituloClassificacao {
+        font-size: 26px;
+        width: 90%;
+    }
+
+    .todosProdutos {
+        gap: 60px 60px;
+        margin-bottom: 3%;
+    }
+
+    .produto {
+        margin: 0;
+        width: 20%;
+        height: 600px;
+    }
+
+    .descricao {
+        max-width: 80%;
+        width: 80%;
+        font-size: 15px;
+        height: 380px;
+        margin-bottom: 30px;
+    }
+
+}

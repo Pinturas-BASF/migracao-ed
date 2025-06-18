@@ -1,0 +1,13 @@
+.interesseContainer{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 10px 0;
+}
+
+.interesseContainer label {
+    font-size: 12px;
+    margin-left: 10px;
+    width: 80%;
+}

@@ -1,0 +1,227 @@
+.copy {
+    background-color: #004a96;
+    height: 80px;
+    width: 100%;
+    margin: 30px 0 0 0;
+    display: grid;
+    grid-template-columns: auto auto;
+    place-items: center;
+}
+
+.copy p,
+.copy p a {
+    color: #fff;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: #e1e2e4ee;
+    color: #fff;
+}
+
+.contato {
+    background-color: #004a96;
+    text-align: center;
+    width: 80%;
+    margin: 20px 0;
+}
+
+.informacoes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.vendedor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.imagemvendedor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imagemvendedor img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.textovendedor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.nomeVendedor {
+    color: #525252;
+    font-weight: bold;
+    font-size: 20px;
+    width: 100%;
+    text-align-last: left;
+    margin: 10px 0 10px 10px;
+}
+
+.numeroVendedor {
+    width: 90%;
+}
+
+.numeroVendedor a {
+    color: #004a96;
+    text-decoration: none;
+}
+
+.shopbasf {
+    color: #000;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.shopbasf .boxCinzaEscuro {
+    background-color: #c5c5c5;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 65%;
+    padding: 10px 30px;
+}
+
+.boxCinzaEscuro h3 {
+    font-weight: bold;
+}
+
+.basf,
+.boxCinzaEscuro a {
+    color: #004a96;
+}
+
+
+@media (min-width: 800px) {
+    .container {
+        width: 90%;
+        height: 200px;
+        padding: 30px 0;
+        margin: 2% 5% 0 5%;
+    }
+
+    .container,
+    .informacoes {
+        flex-direction: row;
+        align-items: center;
+
+    }
+
+    .contato {
+        height: 50px;
+        width: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 0 30px 0 0;
+    }
+
+    .contato h1 {
+        font-size: 24px;
+        font-weight: bold;
+        margin: 0;
+    }
+
+    .informacoes {
+        width: 100%;
+        height: 100%;
+    }
+
+    .vendedor {
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+    }
+
+    .imagemvendedor {
+        width: 40%;
+        padding: 0 0 0 50px;
+    }
+
+    .textovendedor {
+        text-align: left;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 30vw;
+        height: 130%;
+        margin-left: 30px;
+    }
+
+    .nomeVendedor {
+        font-size: 16px;
+    }
+
+    .numeroVendedor {
+        width: 100%;
+    }
+
+    .numeroVendedor a {
+        font-size: 14px;
+        text-wrap: pretty;
+        margin: 0;
+        width: 100% !important;
+    }
+
+    .shopbasf .boxCinzaEscuro {
+        width: 90%;
+        padding: 10px 50px;
+        margin: 0;
+    }
+
+}
+
+@media (min-width: 1300px) {
+    .container {
+        height: 250px;
+        margin: 1% 5% 0 5%;
+    }
+
+    .contato {
+        height: 70px;
+        width: 500px;
+    }
+
+    .contato h1 {
+        font-size: 28px;
+    }
+
+    .imagemvendedor {
+        width: 30%;
+        padding: 0 0 0 50px;
+    }
+
+    .textovendedor {
+        width: 40vw;
+        height: 100%;
+    }
+
+    .numeroVendedor a {
+        font-size: 18px;
+    }
+
+    .shopbasf{
+        height: 80%;
+    }
+
+    .shopbasf .boxCinzaEscuro {
+        width: 100%;
+        height: 100%;
+    }
+}

@@ -1,0 +1,253 @@
+.formularioContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #f2f2f2;
+    margin: 50px 0 30px 0;
+    z-index: 99;
+}
+
+.formularioContainer h1 {
+    font-size: 16px;
+    color: #000;
+    margin-top: 15px;
+}
+
+.formularioContainer button {
+    border: none;
+    font-size: 13px;
+    text-decoration: none;
+    background-color: #004a96;
+    color: #fff;
+    font-weight: bold;
+    padding: 5px;
+    width: 68%;
+    margin: 15px 0;
+}
+
+.inputForms {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10px 0;
+}
+
+.inputForms label {
+    text-align: left;
+    width: 100%;
+    font-weight: bold;
+    font-size: 14px;
+    color: #000;
+}
+
+.inputForms label span {
+    color: #f00;
+}
+
+.inputForms input:focus {
+    border: 1px solid #004A96 !important;
+    outline: #004A96;
+}
+
+.inputForms input::placeholder {
+    font-size: 12px;
+
+}
+
+.produtos::-webkit-scrollbar{
+    width: 5px;
+    background-color: #d9d9d9;
+}
+.produtos::-webkit-scrollbar-thumb{
+    background-color: #004a96;
+}
+
+.formDropdown {
+    display: none;
+}
+.formulario{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.inputFormsTermos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+    font-size: 12px;
+    width: 80%;
+    gap: 10px;
+}
+
+@media (min-width: 800px) {
+
+    .formularioContainer {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        bottom: 0;
+        right: 10px;
+        margin: 0;
+        width: 30%;
+        transform: translateY(92%);
+        border-radius: 30px 30px 0 0;
+    }
+
+    .formDropdown {
+        right: 10px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        flex-direction: row-reverse;
+        /* background-color: #00793A; */
+        background-color: #004A96;
+        color: #fff;
+        font-weight: bold;
+        width: 100%;
+        height: 50px;
+        border-radius: 20px 20px 0 0;
+        cursor: pointer;
+    }
+    
+    .arrow {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #21a0d2;
+        /* background-color: #65AC1E; */
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        margin: -20px 0 0 0;
+    }
+
+    .formDropdown p {
+        margin: 0 10px;
+        font-size: 12px;
+        padding: 10px 0;
+    }
+
+    .formDropdown.ativo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .formDropdown.ativo .arrow{
+        margin: -30px 0 0 20px;
+    }
+
+    .formulario {
+        background-color: #f2f2f2;
+        width: 100%;
+        max-height: 90vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        opacity: 0;
+        transition: opacity 0.5s, transform 0.5s;
+        transform: translateY(100%);
+        position: relative;
+        
+    }
+
+    .formulario#show {
+        animation: fadeInAndUp 0.5s forwards;
+    }
+
+    #visible {
+        animation: moveUp 0.5s forwards
+    }
+
+    @keyframes fadeInAndUp {
+        to {
+            opacity: 1;
+            transform: translateY(0)
+        }
+    }
+
+    @keyframes moveUp {
+        to {
+            transform: translateY(0)
+        }
+    }
+
+
+    .produtos {
+        width: 100%;
+        overflow-y: scroll;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    @keyframes fadeInBottom {
+        to {
+            bottom: 0;
+        }
+    }
+
+    .formularioContainer h1 {
+        font-size: 22px;
+    }
+
+    .formularioContainer button {
+        width: 50%;
+        margin: 2% 0;
+    }
+
+    .inputForms {
+        width: 50%;
+        margin: 2% 0 0% 0;
+    }
+
+    .inputForms input {
+        width: 100%;
+    }
+    .inputFormsTermos{
+        width: 60%;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-evenly;
+        font-size: 12px;
+        margin: 10px 0;
+    }
+    .inputFormsTermos label {
+        width: 80%;
+    }
+
+    .inputForms input:focus {
+        border: 2px solid #004A96 !important;
+        outline: #004A96;
+    }
+}
+
+@media (min-width: 1300px) {
+    .formularioContainer {
+        width: 20%;
+    }
+    .formDropdown {
+        height: 40px;
+    }
+    .formDropdown p {
+        /* font-size: 70%; */
+        font-size: .7em;
+        padding: 5px 0;
+    }
+
+    .formDropdown.ativo .arrow{
+        margin: -30px 0 0 20px;
+    }
+    .produtos {
+        width: 100%;
+        height: 75px;
+        overflow-y: scroll;
+    }
+}

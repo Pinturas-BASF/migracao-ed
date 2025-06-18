@@ -1,0 +1,143 @@
+.containerHome {
+    height: 100%;
+    width: 100%;
+}
+
+.homeTitle,
+.homeSubtitle {
+    margin-left: 5%;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.homeSubtitle {
+    color: #004A96;
+}
+
+.azul {
+    color: #004A96;
+    font-weight: bold;
+}
+
+.mainInfo{
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.mainInfo p {
+    font-size: 14px;
+    text-align: left;
+}
+
+.labContainer{
+    background-color: #D9E3EE;
+    padding: 40px;
+    width: 90%;
+    margin: 30px auto;
+}
+
+.labContainer h3{
+    color: #004A96;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.gridLabAssistant img{
+    display: none;
+}
+
+.infosLab a {
+    color: #21a0d2;
+    text-decoration: underline;
+    width: max-content; 
+
+    &:hover{
+        color: #004A96;
+
+    }
+}
+
+@media (min-width: 600px ) {
+
+    .homeTitle {
+        font-size: 32px;
+        margin-top: 80px;
+    }
+
+    .homeSubtitle {
+        font-size: 28px;
+        margin-top: 20px;
+    }
+
+    .mainInfo p {
+        font-size: 18px;
+    }
+
+    .labContainer{
+        margin: 0 auto;
+    }
+
+    .labContainer h3{
+        font-size: 22px;
+    }
+
+    .gridLabAssistant{
+        display: grid;
+        grid-template-columns: auto auto;
+        place-items: center;
+    }
+    
+    .infosLab {
+        width: 100%;
+        margin: 20px 0;
+        height: 80%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .infosLab p{
+        font-size: 18px;
+        text-align: justify;
+    }
+
+    .gridLabAssistant img {
+        width: 80%;
+        margin: 20px 0;
+        display: block;
+    }
+}
+
+@media (min-width: 1300px) {
+    .labContainer h3{
+        font-size: 24px;
+    }
+
+    .gridLabAssistant{
+        display: grid;
+        grid-template-columns: auto auto;
+        place-items: center;
+    }
+    
+    .infosLab {
+        width: 100%;
+        margin: 20px 0;
+        height: 80%;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+    }
+
+    .infosLab p{
+        font-size: 20px;
+        text-align: justify;
+        width: 80%;
+    }
+
+    .gridLabAssistant img {
+        width: 80%;
+        margin: 20px 0;
+        display: block;
+    }
+}

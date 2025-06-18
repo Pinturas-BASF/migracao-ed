@@ -1,0 +1,17 @@
+.btnFlutuante{
+  height: 60px;
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #004A96;
+  position: fixed;
+  border: none;
+  right: 20px;
+  bottom: 80px; 
+}
+.btnFlutuante:hover{
+  background-color: #21A0D2;
+  cursor: pointer;
+}

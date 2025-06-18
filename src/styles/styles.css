@@ -1,0 +1,63 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+ul,
+li,
+a {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+/* Botões de navegação do Swiper */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #21a0d2;
+  background: none;
+  font-size: 24px;
+  font-weight: bold;
+  transition: color 0.3s;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Posicionamento da seta direita */
+.swiper-button-next {
+  right: 30px;
+}
+
+.swiper-button-prev {
+  left: 30px;
+}
+
+/* Efeito de hover para destacar as setas */
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: #004A96;
+}
+
+/* Paginação personalizada do Swiper */
+.swiper-pagination {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.swiper-pagination-bullet {
+  background-color: rgba(255, 255, 255, 0.6);
+  width: 12px;
+  height: 12px;
+  margin: 0 4px;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #21a0d2;
+}

@@ -1,0 +1,34 @@
+.bg-body-tertiary {
+    background-color: transparent !important;
+}
+
+.ativado {
+    color: #004A96 !important;
+    text-decoration: underline;
+}
+
+.desativado, .ativado, .nav-link {
+    color: rgb(41, 41, 41);
+    width: 100%;
+    text-align: center;
+}
+
+.ativado:hover, .desativado:hover{
+    color: #004A96 !important;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.container-fluid{
+    justify-content: normal !important;
+}
+
+.navbar{
+    padding: 0;
+
+}
+
+.navbar-brand {
+    font-size: 16px;
+    margin-left: 20px !important;
+}
