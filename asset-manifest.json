@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/migracao-ed/static/css/main.724be87c.css",
+    "main.js": "/migracao-ed/static/js/main.89f15003.js",
+    "static/media/Banner-ED-AR-mobile.png": "/migracao-ed/static/media/Banner-ED-AR-mobile.dd609adfa3699a1083a3.png",
+    "static/media/Banner-ED-AR.png": "/migracao-ed/static/media/Banner-ED-AR.8e18a8def230a436b6a1.png",
+    "static/media/lab-assistant.avif": "/migracao-ed/static/media/lab-assistant.d307b878d90f4df1c163.avif",
+    "index.html": "/migracao-ed/index.html",
+    "main.724be87c.css.map": "/migracao-ed/static/css/main.724be87c.css.map",
+    "main.89f15003.js.map": "/migracao-ed/static/js/main.89f15003.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.724be87c.css",
+    "static/js/main.89f15003.js"
+  ]
+}
