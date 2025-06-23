@@ -2,7 +2,7 @@
   "name": "migracao-ed-ar",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://solucionesparapinturas.basf.com.ar",
+  "homepage": "https://solucionesparapinturas.basf.com.ar/",
   "dependencies": {
     "@babel/preset-env": "^7.24.0",
     "@babel/preset-react": "^7.23.3",
