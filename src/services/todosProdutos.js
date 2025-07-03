@@ -22,7 +22,7 @@ export const todosProdutos = [
     id: 4,
     filtro: ['Emulsiones', 'Decorativas'],
     nome: 'Acronal® 1575 sa',
-    desc: 'Dispersión de un copolímero acrílico y estireno, libre de APEO. Se utiliza como aglutinante en la fabricación de masillas de recubrimiento y pinturas de látex, proporcionando una alta resistencia a la abrasión. Recomendado principalmente para pinturas de interior y exterior. Otorga excelente resistencia al frote. Buena relación costo por desempeño. Emulsión estireno-acrílica APEO-free de excelente resistencia a la abrasión y amplitud de formulación. Por su diseño, requiere menor uso de coalescentes y espesantes. Recomendada para pinturas de interior y exterior, masillas, adhesivos en pasta, revestimientos texturados, etc.',
+    desc: 'Dispersión estireno-acrílica libre de APEO, diseñada como aglutinante para pinturas látex y masillas. Brinda alta resistencia a la abrasión y al frote, con excelente desempeño costo-beneficio. Requiere menos coalescentes y espesantes, y permite una amplia versatilidad de formulación. Ideal para pinturas interiores y exteriores, masillas, adhesivos en pasta y revestimientos texturados.',
   },
   {
     id: 5,

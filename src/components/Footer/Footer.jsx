@@ -1,5 +1,7 @@
 import React from 'react'
 import styles from './footer.module.css'
+import { Link } from 'react-router-dom'
+import Seller from '../../assets/Juan-Navarro.png'
 
 export default function Footer() {
 
@@ -20,7 +22,7 @@ export default function Footer() {
                     <div className={styles.vendedor}>
                         <div className={styles.imagemvendedor}>
                             <img
-                                src="https://promo.basf.com/campaign/Projetos/Melhorias%20Shops/Footer/Regiao/Juan%20Navarro.png"
+                                src={Seller}
                                 alt="Vendedor basf"
                             />
                         </div>
@@ -42,7 +44,9 @@ export default function Footer() {
             </div>
             <div className={styles.copy}>
                 <p>Copyright © BASF SA {ano}</p>
-                <p><a href="/politica-privacidad" rel="noreferrer">Política de Privacidad</a></p>
+                <Link to="/politica-privacidad">
+                    <p><a rel="noreferrer">Política de Privacidad</a></p>
+                </Link>
             </div>
         </>
     )

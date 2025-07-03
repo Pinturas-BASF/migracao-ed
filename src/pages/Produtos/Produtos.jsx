@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { useLocation, useNavigate } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 import Formulario from '../../components/Formulario/Formulario'
 import Produto from '../../components/Produto/Produto'
@@ -11,6 +12,11 @@ export default function Produtos() {
     const [produtoFiltrado, setProdutoFiltrado] = useState(todosProdutos)
     const [nomeDoFiltro, setNomeDoFiltro] = useState('Todos')
 
+    const location = useLocation()
+    const navigate = useNavigate()
+
+    const abrirFormulario = location.state?.abrirFormulario || false
+
     // Função de filtro dos produtos
     const filtro = (tipos) => {
         if (tipos !== 'Todos') {
@@ -21,6 +27,12 @@ export default function Produtos() {
             setProdutoFiltrado(todosProdutos)
         }
     }
+
+    useEffect(() => {
+        if(abrirFormulario) {
+            navigate(location.pathname, {replace:true})
+        }
+    }, [abrirFormulario, location.pathname, navigate]);
 
     const [loading, setLoading] = useState(false)
     useEffect(() => {
@@ -59,7 +71,7 @@ export default function Produtos() {
                     <p>Cargando los productos</p>
                 </div>
             }
-            <Formulario />
+            <Formulario abrirPorDefecto={abrirFormulario}/>
         </>
     )
 }

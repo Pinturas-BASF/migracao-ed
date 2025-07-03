@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Pagination, Autoplay } from 'swiper/modules'
+import { Link } from 'react-router-dom'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
@@ -34,13 +35,14 @@ export default function Carousel() {
         className={styles.customSwiper}
       >
         <SwiperSlide>
-          <img
-            src={tamanhoTela < 600 ? bannerMobile : banner}
-            alt='Banner de los productos'
-            className={styles.bannerImage}
-            onClick={() => window.open('/productos', '_self')}
-            style={{ cursor: 'pointer' }}
-          />
+          <Link to="/productos">
+              <img
+                src={tamanhoTela < 600 ? bannerMobile : banner}
+                alt="Banner de los productos"
+                className={styles.bannerImage}
+                style={{ cursor: 'pointer' }}
+              />
+            </Link>
         </SwiperSlide>
       </Swiper>
     </div>

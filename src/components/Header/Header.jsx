@@ -1,22 +1,29 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import Container from 'react-bootstrap/Container'
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
 import Offcanvas from 'react-bootstrap/Offcanvas'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate, Link, useLocation } from 'react-router-dom'
 import './hamburger.css'
 import styles from './header.module.css'
 import Carousel from '../Carousel/Carousel'
 import { FaShoppingCart } from "react-icons/fa";
+import { FormContext } from '../../context/formContext'
 
 export default function Header() {
   // Criando uma variável que verifica se o header foi clicado ou não
   const [clicado, setClicado] = useState(false)
 
+  const navigate = useNavigate()
+  const { abrirFormulario } = useContext(FormContext)
+
   // Função para fazer a verificação se o header foi clicado
   function clicouHeader() {
     setClicado(!clicado)
+  }
+    const handleRegistroClick = () => {
+    abrirFormulario()
   }
 
   return (
@@ -85,7 +92,7 @@ export default function Header() {
                       >
                         {({ isActive }) => (
                           <span className={isActive ? 'ativado' : 'desativado'}>
-                            ¡HAZ TU COMPRA YA MISMO!
+                            HAZ TU COMPRA YA MISMO
                           </span>
                         )}
                       </NavLink>
@@ -123,12 +130,23 @@ export default function Header() {
               </NavLink>
             </li>
 
+            {/* Nuevo botón: Registrate ahora */}
+            <li>
+              <NavLink to='/productos' state={{ abrirFormulario: true }}>
+                {({ isActive }) => (
+                  <span className={isActive ? 'ativado' : 'desativado'}>
+                    REGISTRATE AHORA
+                  </span>
+                )}
+              </NavLink>
+            </li>
+
             {/* Menu de compras */}
             <li>
               <NavLink to='https://my.basf.com/es-ES/' target="_blank">
                 {({ isActive }) => (
                   <span className={isActive ? 'ativado' : 'desativado'}>
-                   <FaShoppingCart /> ¡HAZ TU COMPRA YA MISMO!
+                    ACCEDÉ CON TU USUARIO
                   </span>
                 )}
               </NavLink>

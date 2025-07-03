@@ -1,11 +1,12 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 import styles from './formulario.module.css'
 import ProdutoInteresse from '../ProdutoInteresse/ProdutoInteresse'
 import { FormContext } from '../../context/formContext'
 import { ThreeDots } from 'react-loader-spinner';
 import { SlArrowUp, SlArrowDown } from "react-icons/sl";
+import { Link } from 'react-router-dom';
 
-export default function Formulario() {
+export default function Formulario({ abrirPorDefecto = false }) {
 
   // Pegando as variaveis do UseContext 
   const { enviarForm, success, produtosSelecionados } = useContext(FormContext)
@@ -16,7 +17,13 @@ export default function Formulario() {
   const [tel, setTel] = useState('')
   const [email, setEmail] = useState('')
   const [termos, setTermos] = useState(false)
-  const [clicou, setClicou] = useState(false)
+  const [clicou, setClicou] = useState(abrirPorDefecto)
+
+  useEffect(() => {
+    if (abrirPorDefecto) {
+      setClicou(true)
+    }
+  }, [abrirPorDefecto])
 
   return (
     <>
@@ -42,12 +49,12 @@ export default function Formulario() {
 
           <div className={styles.inputForms}>
             <label htmlFor="email">Correo <span>*</span></label>
-            <input type="email" name="email" placeholder='Ingresse su correo' onChange={e => setEmail(e.target.value)} value={email} />
+            <input type="email" name="email" placeholder='Ingrese su correo' onChange={e => setEmail(e.target.value)} value={email} />
           </div>
 
           <div className={styles.inputForms}>
             <label htmlFor="telefone">Teléfono </label>
-            <input type="tel" name="telefone" placeholder='Ingresse su teléfono' onChange={e => setTel(e.target.value)} value={tel} />
+            <input type="tel" name="telefone" placeholder='Ingrese su teléfono' onChange={e => setTel(e.target.value)} value={tel} />
           </div>
 
           <div className={styles.inputForms}>
@@ -56,7 +63,7 @@ export default function Formulario() {
           </div>
 
           <div className={styles.inputFormsTermos}>
-            <label htmlFor="termosEcond">Acepto los términos y condiciones y la <a href="/solucionesparapinturas/politica-privacidad" target='_blank' rel="noreferrer">política de privacidad</a>.</label>
+            <label htmlFor="termosEcond">Acepto los términos y condiciones y la <Link to="/politica-privacidad"><a target='_blank' rel="noreferrer">políticas de privacidad</a></Link>.</label>
             <input type="checkbox" name="termosEcond" id='termosEcond' onChange={e => setTermos(e.target.checked)} />
           </div>
 

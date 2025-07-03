@@ -8,6 +8,10 @@ export const FormContext = createContext({})
 export default function FormContextProvider({ children }) {
   // Criando a variável para verificar se a API foi um sucesso ou não
   const [success, setSuccess] = useState(false)
+  const [formAbierto, setFormAbierto] = useState(false)
+
+  const abrirFormulario = () => setFormAbierto(true)
+  const cerrarFormulario = () => setFormAbierto(false)
 
   // Utilizando o axios para fazer as configurações da API
   const url = axios.create({
@@ -121,6 +125,9 @@ export default function FormContextProvider({ children }) {
   return (
     <FormContext.Provider
       value={{
+        formAbierto,
+        abrirFormulario,
+        cerrarFormulario,
         enviarForm,
         tenhoInteresse,
         produtosSelecionados,
