@@ -1,19 +1,19 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import styles from './home.module.css';
+import { useNavigate } from 'react-router-dom';
+import { MobileNavButtons } from '../../components/MobileNavButtons/MobileNavButtons';
 
 import lab from '../../assets/lab-assistant.avif'
 
 export default function Home() {
-
-
     return (
         <>
             <Helmet>
                 <title>Soluciones para pinturas | Home</title>
             </Helmet>
             <main className={styles.containerHome}>
-
+                <MobileNavButtons />
                 <h1 className={styles.homeTitle}>Soluciones BASF para </h1>
                 <h2 className={styles.homeSubtitle}>Formular pinturas</h2>
 

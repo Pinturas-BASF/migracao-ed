@@ -92,7 +92,7 @@ export default function Header() {
                       >
                         {({ isActive }) => (
                           <span className={isActive ? 'ativado' : 'desativado'}>
-                            HAZ TU COMPRA YA MISMO
+                            ACCEDÉ CON TU USUARIO
                           </span>
                         )}
                       </NavLink>
