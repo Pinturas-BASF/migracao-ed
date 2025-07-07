@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 import Formulario from '../../components/Formulario/Formulario'
@@ -14,6 +14,8 @@ export default function Produtos() {
 
     const location = useLocation()
     const navigate = useNavigate()
+
+    const productosRef = useRef(null)
 
     const abrirFormulario = location.state?.abrirFormulario || false
 
@@ -36,8 +38,17 @@ export default function Produtos() {
 
     const [loading, setLoading] = useState(false)
     useEffect(() => {
-        setTimeout(() => {setLoading(true)}, 3000)
+        setTimeout(() => {setLoading(true)}, 0)
     }, []);
+
+    useEffect(() => {
+        if (loading || productosRef.current) {
+            productosRef.current.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start',
+            });
+        }
+    }, [loading]);
 
     return (
         <>
@@ -64,13 +75,19 @@ export default function Produtos() {
                     <button onClick={() => filtro('Industriales')} className={styles.btnFiltros}>Pinturas Industriales</button>
                 </div>
             </div>
-            {loading ? <Produto filtro={produtoFiltrado} nomeDoFiltro={nomeDoFiltro}/>
-                :
+            {loading ? (
+                <div ref={productosRef} >
+                <Produto filtro={produtoFiltrado} nomeDoFiltro={nomeDoFiltro}/>
+                </div>
+            ) : (
+
+               <div ref={productosRef} >
                 <div className={styles.containerLoading}>
                     <div id={styles.loadingProduct}></div>
                     <p>Cargando los productos</p>
                 </div>
-            }
+                </div> 
+            )}
             <Formulario abrirPorDefecto={abrirFormulario}/>
         </>
     )

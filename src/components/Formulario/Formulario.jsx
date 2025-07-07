@@ -30,12 +30,15 @@ export default function Formulario({ abrirPorDefecto = false }) {
       <div className={styles.formularioContainer} id={clicou ? styles.visible : ""}>
         <div className={[styles.formDropdown,styles.ativo].join(' ')} onClick={() => setClicou(!clicou)} id={"formulario"} data-formAtivo={clicou}>
           <div className={styles.arrow}>{clicou ? <SlArrowDown /> : <SlArrowUp />}</div>
-          <p>CLIQUE Y SOLICITE SU INTERÉS.</p>
+          <p>Hacé click y completa tu solicitud.</p>
         </div>
 
         <div className={styles.formulario} id={clicou ? styles.show : ""}>
 
           <h1>Productos que tengo interés</h1>
+          {produtosSelecionados.length === 0 &&(
+            <p className={styles.messageInfo}>Seleccionar el producto que le interesa para poder recibir información</p>
+          )}
           {/* colocar os produtos aqui */}
           <div className={styles.produtos}>
             <ProdutoInteresse />
@@ -48,8 +51,8 @@ export default function Formulario({ abrirPorDefecto = false }) {
           </div>
 
           <div className={styles.inputForms}>
-            <label htmlFor="email">Correo <span>*</span></label>
-            <input type="email" name="email" placeholder='Ingrese su correo' onChange={e => setEmail(e.target.value)} value={email} />
+            <label htmlFor="email">Correo Electrónico<span>*</span></label>
+            <input type="email" name="email" placeholder='Ingrese su correo electrónico' onChange={e => setEmail(e.target.value)} value={email} />
           </div>
 
           <div className={styles.inputForms}>

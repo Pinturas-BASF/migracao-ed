@@ -6,7 +6,6 @@ export default function Produto({ filtro, nomeDoFiltro }) {
   // Pegando as variaveis do UseContext
   const { tenhoInteresse, ativarForm } = useContext(FormContext)
 
-  console.log(nomeDoFiltro)
 
   return (
     <>
