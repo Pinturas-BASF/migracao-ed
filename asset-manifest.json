@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.24cf0107.css",
-    "main.js": "/static/js/main.0666333d.js",
+    "main.css": "/static/css/main.820f40d3.css",
+    "main.js": "/static/js/main.e2521b16.js",
     "static/media/Banner-ED-AR-mobile.png": "/static/media/Banner-ED-AR-mobile.dd609adfa3699a1083a3.png",
     "static/media/Banner-ED-AR.png": "/static/media/Banner-ED-AR.8e18a8def230a436b6a1.png",
     "static/media/lab-assistant.avif": "/static/media/lab-assistant.d307b878d90f4df1c163.avif",
     "static/media/Juan-Navarro.png": "/static/media/Juan-Navarro.d779a9398d7a4723cde0.png",
     "index.html": "/index.html",
-    "main.24cf0107.css.map": "/static/css/main.24cf0107.css.map",
-    "main.0666333d.js.map": "/static/js/main.0666333d.js.map"
+    "main.820f40d3.css.map": "/static/css/main.820f40d3.css.map",
+    "main.e2521b16.js.map": "/static/js/main.e2521b16.js.map"
   },
   "entrypoints": [
-    "static/css/main.24cf0107.css",
-    "static/js/main.0666333d.js"
+    "static/css/main.820f40d3.css",
+    "static/js/main.e2521b16.js"
   ]
 }
