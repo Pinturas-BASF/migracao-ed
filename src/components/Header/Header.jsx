@@ -77,16 +77,13 @@ export default function Header() {
                       </NavLink>
                     </Nav.Link>
 
-                    <Nav.Link>
-                        <a
+                    <Nav.Link
+                        
                             href='https://my.basf.com/es-ES/'
                             target='_blank'
-                            rel='noopener noreferrer'
-                            onClick={clicouHeader}
                             className='desativado'
                         >
                             ACCEDÉ CON TU USUARIO
-                        </a>
                     </Nav.Link>
                   </Nav>
                 </Offcanvas.Body>

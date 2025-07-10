@@ -54,8 +54,10 @@ export default function Produtos() {
         setTimeout(() => {setLoading(true)}, 0)
     }, [])
 
+    // Unify the scroll for mobile and desktop
     useEffect(() => {
         if (loading) {
+            // Scroll to form
             if (scrollToForm && formularioRef.current) {
                 setTimeout(() => {
                     formularioRef.current.scrollIntoView({
@@ -64,27 +66,25 @@ export default function Produtos() {
                     })
                     setScrollToForm(false)
                 }, 100)
-            } else if (!isMobile() && productosRef.current) {
+            } 
+            // Scroll to products in desktop
+            else if (!isMobile() && productosRef.current && !scrollToForm) {
                 productosRef.current.scrollIntoView({
                     behavior: 'smooth',
                     block: 'start',
                 })
             }
-        }
-    }, [loading, scrollToForm])
-
-    useEffect(() => {
-        if (loading && isMobile() && !abrirFormulario && !scrollToForm) {
-            setTimeout(() => {
-                if (productosRef.current) {
+            // Scroll to products in mobile
+            else if (isMobile() && !abrirFormulario && !scrollToForm && !showForm && productosRef.current) {
+                setTimeout(() => {
                     productosRef.current.scrollIntoView({
                         behavior: 'smooth',
                         block: 'start',
                     })
-                }
-            }, 100)
+                }, 100)
+            }
         }
-    }, [loading, abrirFormulario, scrollToForm])
+    }, [loading, scrollToForm, abrirFormulario, showForm])
 
     return (
         <>
