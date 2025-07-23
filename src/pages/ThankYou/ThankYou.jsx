@@ -1,9 +1,17 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import styles from './thankyou.module.css';
+import { useEffect } from 'react';
 
 export default function ThankYou() {
-  
+  useEffect(() => {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: 'pageview',
+      pagePath: window.location.pathname,
+      pageTitle: 'Thank You',
+    });
+  }, []);
 
   return (
     <>
