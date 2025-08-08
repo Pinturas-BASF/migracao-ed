@@ -24,13 +24,14 @@
     return (
         <div className="popup-overlay" onClick={closePopup}>
         <div className="popup-content" onClick={(e) => e.stopPropagation()}>
+            <button onClick={closePopup} className="close-button">
+                        <img src={closeIcon} alt="Cerrar popup" />
+            </button>      
+               
                 <div className="Logo__">
                     
                 </div>
-                <div className="close__"></div>
-                    <button onClick={closePopup} className="close-button">
-                        <img src={closeIcon} alt="Cerrar popup" />
-                    </button>
+
             <div className="text__">
 
                 <div className="titulos_webinar">
