@@ -33,3 +33,9 @@
     height: 50vh;
   }
 }
+@media (max-width: 600px) {
+  :global(.swiper-button-prev),
+  :global(.swiper-button-next) {
+    display: none;
+  }
+}

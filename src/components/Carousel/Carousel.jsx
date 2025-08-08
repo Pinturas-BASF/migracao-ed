@@ -1,7 +1,8 @@
 // src/components/Carousel/Carousel.jsx
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Pagination, Autoplay } from 'swiper/modules'
+import BannerWebinar from './BannerWebinar'
 import { Link } from 'react-router-dom'
 import 'swiper/css'
 import 'swiper/css/navigation'
@@ -11,40 +12,67 @@ import styles from './carousel.module.css'
 import banner from '../../assets/banners/Banner-ED-AR.png'
 import bannerMobile from '../../assets/banners/Banner-ED-AR-mobile.png'
 
-export default function Carousel() {
 
-    const [tamanhoTela, setTamanhoTela] = useState(window.innerWidth);
+const banners = [
+  {
+    id: 2,
+    type: 'component',
+    component: BannerWebinar,
+    alt: 'Banner Promocional',
 
-  useEffect(() => {
-    const handleResize = () => {
-      setTamanhoTela(window.innerWidth);
-    };
+  },
+  {
+    id: 1,
+    type: 'image',
+    image: banner,
+    imageMobile: bannerMobile,
+    alt: 'Banner de los productos',
+    link: '/productos'
+  }
+]
 
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
+const Carousel = () =>{
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+    useEffect(() => {
+        const handleResize = () => setWindowWidth(window.innerWidth);
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+      }, []);
 
   return (
     <div className={styles.carouselContainer}>
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
+        spaceBetween={0}
+        slidesPerView={1}
         navigation
         pagination={{ clickable: true }}
         autoplay={{ delay: 5000, disableOnInteraction: false }}
         loop={true}
         className={styles.customSwiper}
-      >
-        <SwiperSlide>
-          <Link to="/productos">
-              <img
-                src={tamanhoTela < 600 ? bannerMobile : banner}
-                alt="Banner de los productos"
-                className={styles.bannerImage}
-                style={{ cursor: 'pointer' }}
-              />
-            </Link>
-        </SwiperSlide>
-      </Swiper>
+        >
+          {banners.map(banner => (
+            <SwiperSlide key={banner.id}>
+              {banner.type === 'image' ? (
+                <Link to={banner.link} aria-label={banner.alt}>
+                  <img
+                    src={windowWidth < 600 ? banner.imageMobile : banner.image}
+                    alt={banner.alt}
+                    className={styles.bannerImage}
+                    style={{ cursor: 'pointer' }}
+                  />
+                </Link>
+                ) : (
+                  <div className={styles.customBannerContainer}>
+                    <banner.component windowWidth={windowWidth}/>
+                    </div>
+                )}
+            </SwiperSlide> 
+          ))}
+        </Swiper>
     </div>
-  )
-}
+  );
+}      
+
+export default Carousel;

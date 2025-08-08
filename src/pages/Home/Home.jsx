@@ -1,7 +1,5 @@
-import React from 'react';
 import { Helmet } from 'react-helmet';
 import styles from './home.module.css';
-import { useNavigate } from 'react-router-dom';
 import { MobileNavButtons } from '../../components/MobileNavButtons/MobileNavButtons';
 
 import lab from '../../assets/lab-assistant.avif'
