@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.3856e3ef.css",
-    "main.js": "/static/js/main.4023e71c.js",
+    "main.css": "/static/css/main.24c08c24.css",
+    "main.js": "/static/js/main.0b4a39dd.js",
     "static/media/Banner-ED-AR-mobile.png": "/static/media/Banner-ED-AR-mobile.dd609adfa3699a1083a3.png",
     "static/media/Banner-ED-AR.png": "/static/media/Banner-ED-AR.8e18a8def230a436b6a1.png",
     "static/media/Img_Desktop.png": "/static/media/Img_Desktop.aa08240fc0f084491a58.png",
@@ -12,11 +12,11 @@
     "static/media/Juan-Navarro.png": "/static/media/Juan-Navarro.d779a9398d7a4723cde0.png",
     "index.html": "/index.html",
     "static/media/trailing-icon-button.svg": "/static/media/trailing-icon-button.1d46d6e28a24ff3c94ee178261a4cb8d.svg",
-    "main.3856e3ef.css.map": "/static/css/main.3856e3ef.css.map",
-    "main.4023e71c.js.map": "/static/js/main.4023e71c.js.map"
+    "main.24c08c24.css.map": "/static/css/main.24c08c24.css.map",
+    "main.0b4a39dd.js.map": "/static/js/main.0b4a39dd.js.map"
   },
   "entrypoints": [
-    "static/css/main.3856e3ef.css",
-    "static/js/main.4023e71c.js"
+    "static/css/main.24c08c24.css",
+    "static/js/main.0b4a39dd.js"
   ]
 }
