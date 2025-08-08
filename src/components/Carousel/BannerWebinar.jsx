@@ -13,7 +13,7 @@ const BannerWebinar = ({ windowWidth }) => {
             <div className={styles.data}>
                 <div className={styles.header}>
                     <p><strong>21 DE AGOSTO 2025</strong></p>
-                    <p>11:00 AM - Argentina  |  10:00 AM - Chile  |  09:00 - Colombia</p>
+                    <p>11:00 AM - Argentina  |  10:00 AM - Chile  |  09:00 AM - Colombia</p>
                 </div>
 
                     <div className={styles.title}>

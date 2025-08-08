@@ -66,7 +66,7 @@
             <div className="footer">
                 <div className="date__">
                     <p><strong>21 DE AGOSTO 2025</strong></p>
-                    <p>11:00 AM - Argentina  |  10:00 AM - Chile  |  09:00 - Colombia</p>
+                    <p>11:00 AM - Argentina  |  10:00 AM - Chile  |  09:00 AM - Colombia</p>
                 </div>
 
                 <button onClick={redirectToWebinar} className="register__">Registrate en webinar</button>
