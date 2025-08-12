@@ -9,33 +9,35 @@ const redirectToWebinar = () => {
 const BannerWebinar = ({ windowWidth }) => {
     const isMobile = windowWidth < 600;
     return (
-        <div className={styles.banner}>
+        <div className={styles.banner} onClick={redirectToWebinar}>
             <div className={styles.data}>
-                <div className={styles.header}>
-                    <p><strong>21 DE AGOSTO 2025</strong></p>
-                    <p>11:00 AM - Argentina  |  10:00 AM - Chile  |  09:00 AM - Colombia</p>
-                </div>
-
-                    <div className={styles.title}>
-                    {isMobile ? (
-                        <>
-                        <p>Participá del Webinar de <strong>Modificadores</strong></p>
-                        <p><strong>Reológicos de BASF</strong></p>
-                        </>
-                    ) : (
-                        <>
-                        <p>Participá del Webinar</p>
-                        <p>de <strong>Modificadores</strong></p>
-                        <p><strong>Reológicos de BASF</strong></p>
-                        </>
-                    )}
+            
+                    <div className={styles.header}>
+                        <p><strong>21 DE AGOSTO 2025</strong></p>
+                        <p>11:00 AM - Argentina  |  10:00 AM - Chile  |  09:00 AM - Colombia</p>
                     </div>
 
-                <div className={styles.description}>
-                    <p>Diseñados para cubrir distintos perfiles de viscosidad</p>
-                    <p>en formulaciones de <strong>pinturas arquitectónicas.</strong></p>
-                </div>
+                <div className={styles.info__}>
+                    <div className={styles.title}>
+                        {isMobile ? (
+                            <>
+                            <p>Participá del Webinar de <strong>Modificadores</strong></p>
+                            <p><strong>Reológicos de BASF</strong></p>
+                            </>
+                        ) : (
+                            <>
+                            <p>Participá del Webinar</p>
+                            <p>de <strong>Modificadores</strong></p>
+                            <p><strong>Reológicos de BASF</strong></p>
+                            </>
+                        )}
+                    </div>
 
+                    <div className={styles.description}>
+                        <p>Diseñados para cubrir distintos perfiles de viscosidad</p>
+                        <p>en formulaciones de <strong>pinturas arquitectónicas.</strong></p>
+                    </div>
+                </div>            
                 <button className={styles.button} onClick={redirectToWebinar}>Registrate en webinar</button>
 
             </div>
