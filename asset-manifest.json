@@ -1,22 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.bf2cefe5.css",
-    "main.js": "/static/js/main.99e54061.js",
+    "main.css": "/static/css/main.afac2230.css",
+    "main.js": "/static/js/main.04cb56ca.js",
     "static/media/Banner-ED-AR-mobile.png": "/static/media/Banner-ED-AR-mobile.dd609adfa3699a1083a3.png",
     "static/media/Banner-ED-AR.png": "/static/media/Banner-ED-AR.8e18a8def230a436b6a1.png",
-    "static/media/Img_Desktop.png": "/static/media/Img_Desktop.aa08240fc0f084491a58.png",
-    "static/media/Img_Mobile.png": "/static/media/Img_Mobile.be34eeb32ceabaa9645d.png",
-    "static/media/pintura.png": "/static/media/pintura.8196f8898e34bb838c87.png",
-    "static/media/personas.png": "/static/media/personas.c2414fdf9a2c6a874acb.png",
     "static/media/lab-assistant.avif": "/static/media/lab-assistant.d307b878d90f4df1c163.avif",
     "static/media/Juan-Navarro.png": "/static/media/Juan-Navarro.d779a9398d7a4723cde0.png",
     "index.html": "/index.html",
-    "static/media/trailing-icon-button.svg": "/static/media/trailing-icon-button.1d46d6e28a24ff3c94ee178261a4cb8d.svg",
-    "main.bf2cefe5.css.map": "/static/css/main.bf2cefe5.css.map",
-    "main.99e54061.js.map": "/static/js/main.99e54061.js.map"
+    "main.afac2230.css.map": "/static/css/main.afac2230.css.map",
+    "main.04cb56ca.js.map": "/static/js/main.04cb56ca.js.map"
   },
   "entrypoints": [
-    "static/css/main.bf2cefe5.css",
-    "static/js/main.99e54061.js"
+    "static/css/main.afac2230.css",
+    "static/js/main.04cb56ca.js"
   ]
 }
