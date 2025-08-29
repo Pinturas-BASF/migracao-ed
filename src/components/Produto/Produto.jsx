@@ -9,7 +9,7 @@ export default function Produto({ filtro, nomeDoFiltro }) {
 
   return (
     <>
-      <section className={styles.container}>
+      <section id="productos" className={styles.container}>
         <h1 className={styles.tituloClassificacao}>
           {nomeDoFiltro === 'Industriales' ? '' : 'Emulsiones Polimérica'}
         </h1>

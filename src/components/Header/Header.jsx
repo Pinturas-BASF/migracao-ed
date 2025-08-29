@@ -8,6 +8,7 @@ import { NavLink } from 'react-router-dom'
 import './hamburger.css'
 import styles from './header.module.css'
 import Carousel from '../Carousel/Carousel'
+import { useNavigate, useLocation } from 'react-router-dom'
 
 export default function Header() {
   // Criando uma variável que verifica se o header foi clicado ou não
@@ -16,6 +17,13 @@ export default function Header() {
   // Função para fazer a verificação se o header foi clicado
   function clicouHeader() {
     setClicado(!clicado)
+  }
+
+  const location = useLocation()
+  const navigate = useNavigate()
+  const handleGotoProds = () => {
+    navigate('/productos', { state: { scrollTrigger: Date.now() } })
+    setClicado(false)
   }
 
 
@@ -64,17 +72,10 @@ export default function Header() {
                       </NavLink>
                     </Nav.Link>
 
-                    <Nav.Link>
-                      <NavLink
-                        to='/productos'
-                        onClick={clicouHeader}
-                      >
-                        {({ isActive }) => (
-                          <span className={isActive ? 'ativado' : 'desativado'}>
-                            PRODUCTOS
-                          </span>
-                        )}
-                      </NavLink>
+                    <Nav.Link onClick={handleGotoProds}>
+                      <span className={location.pathname === '/productos' ? 'ativado' : 'desativado'}>
+                        PRODUCTOS
+                      </span>
                     </Nav.Link>
 
                     <Nav.Link
@@ -109,7 +110,10 @@ export default function Header() {
 
             {/* Menu da productos */}
             <li>
-              <NavLink to='/productos'>
+              <NavLink
+                to='/productos'
+                state={{ scrollTrigger: Date.now() }}
+              >
                 {({ isActive }) => (
                   <span className={isActive ? 'ativado' : 'desativado'}>
                     PRODUCTOS
@@ -118,9 +122,13 @@ export default function Header() {
               </NavLink>
             </li>
 
+
             {/* Nuevo botón: Registrate ahora */}
             <li>
-              <NavLink to='/productos' state={{ abrirFormulario: true }}>
+              <NavLink
+                to='/productos'
+                state={{ abrirFormulario: true, scrollTrigger: Date.now() }}
+              >
                 {({ isActive }) => (
                   <span className={isActive ? 'ativado' : 'desativado'}>
                     REGISTRATE AHORA
@@ -128,6 +136,7 @@ export default function Header() {
                 )}
               </NavLink>
             </li>
+
 
             {/* Menu de compras */}
             <li>

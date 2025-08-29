@@ -13,21 +13,28 @@ export default function Produtos() {
     const [nomeDoFiltro, setNomeDoFiltro] = useState('Todos')
     const [showForm, setShowForm] = useState(false)
     const [scrollToForm, setScrollToForm] = useState(false)
+    const [loading, setLoading] = useState(false)
+
     const location = useLocation()
     const navigate = useNavigate()
+
     const productosRef = useRef(null)
     const formularioRef = useRef(null)
 
+    const scrollTrigger = location.state?.scrollTrigger
     const abrirFormulario = location.state?.abrirFormulario || false
-
-    const isMobile = () => {
-        return window.innerWidth <= 600
-    }
     
     const handleAbrirFormulario = () => {
-        setShowForm(true)
-        setScrollToForm(true)
+        setShowForm(true);
+        setScrollToForm(true);
     }
+
+    useEffect(() => {
+        if (scrollToForm && formularioRef.current) {
+            formularioRef.current.scrollIntoView({ behavior: 'smooth' });
+            setScrollToForm(false);
+        }
+    }, [scrollToForm]);
 
     // Função de filtro dos produtos
     const filtro = (tipos) => {
@@ -41,50 +48,29 @@ export default function Produtos() {
     }
 
     useEffect(() => {
-        if(abrirFormulario) {
-            setShowForm(true)
-            setScrollToForm(true)
-            navigate(location.pathname, { replace: true })
-        }
-    }, [abrirFormulario, location.pathname, navigate])
-
-    const [loading, setLoading] = useState(false)
-    
-    useEffect(() => {
-        setTimeout(() => {setLoading(true)}, 0)
+        const timer = setTimeout(() => setLoading(true), 0)
+        return () => clearTimeout(timer)
     }, [])
 
-    // Unify the scroll for mobile and desktop
     useEffect(() => {
-        if (loading) {
-            // Scroll to form
-            if (scrollToForm && formularioRef.current) {
-                setTimeout(() => {
-                    formularioRef.current.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start',
-                    })
-                    setScrollToForm(false)
-                }, 100)
-            } 
-            // Scroll to products in desktop
-            else if (!isMobile() && productosRef.current && !scrollToForm) {
-                productosRef.current.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start',
-                })
+    if (scrollTrigger && loading) {
+      if (productosRef.current) {
+        productosRef.current.scrollIntoView({ behavior: 'smooth' });
+        if (abrirFormulario && formularioRef.current) {
+          setTimeout(() => {
+            if (window.innerWidth <= 600) {
+              formularioRef.current.scrollIntoView({ behavior: 'smooth' });
+            } else {
+              const toggleButton = document.querySelector('.js-toggle-form');
+              toggleButton?.click();
             }
-            // Scroll to products in mobile
-            else if (isMobile() && !abrirFormulario && !scrollToForm && !showForm && productosRef.current) {
-                setTimeout(() => {
-                    productosRef.current.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start',
-                    })
-                }, 100)
-            }
+          }, 100);
         }
-    }, [loading, scrollToForm, abrirFormulario, showForm])
+      }
+      navigate(location.pathname, { replace: true, state: {} });
+    }
+  }, [scrollTrigger, abrirFormulario, loading, navigate, location.pathname]);
+
 
     return (
         <>

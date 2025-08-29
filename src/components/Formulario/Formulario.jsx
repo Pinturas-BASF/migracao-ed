@@ -28,7 +28,10 @@ export default function Formulario({ abrirPorDefecto = false }) {
   return (
     <>
       <div className={styles.formularioContainer} id={clicou ? styles.visible : ""}>
-        <div className={[styles.formDropdown,styles.ativo].join(' ')} onClick={() => setClicou(!clicou)} id={"formulario"} data-formAtivo={clicou}>
+        <div
+        className={[styles.formDropdown, styles.ativo,'js-toggle-form'].join(' ')} onClick={() => setClicou(!clicou)} id={"formulario"} data-formAtivo={clicou}
+        
+        >
           <div className={styles.arrow}>{clicou ? <SlArrowDown /> : <SlArrowUp />}</div>
           <p>Hacé click y completa tu solicitud.</p>
         </div>

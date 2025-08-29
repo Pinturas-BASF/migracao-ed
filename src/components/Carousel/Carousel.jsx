@@ -48,7 +48,7 @@ const Carousel = () =>{
           {banners.map(banner => (
             <SwiperSlide key={banner.id}>
               {banner.type === 'image' ? (
-                <Link to={banner.link} aria-label={banner.alt}>
+                <Link to={banner.link} aria-label={banner.alt} state={{ scrollTrigger: Date.now() }}>
                   <img
                     src={windowWidth < 600 ? banner.imageMobile : banner.image}
                     alt={banner.alt}
