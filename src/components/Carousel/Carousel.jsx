@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Pagination, Autoplay } from 'swiper/modules'
 //import BannerWebinar from './BannerWebinar'
+import BannerDiscount from './BannerDiscount'
 import { Link } from 'react-router-dom'
 import 'swiper/css'
 import 'swiper/css/navigation'
@@ -14,6 +15,12 @@ import bannerMobile from '../../assets/banners/Banner-ED-AR-mobile.png'
 
 
 const banners = [
+  {
+    id: 2,
+    type: 'component',
+    component: BannerDiscount,
+    alt: 'Banner de descuento',
+  },
   {
     id: 1,
     type: 'image',

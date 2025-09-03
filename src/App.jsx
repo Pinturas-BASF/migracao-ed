@@ -5,6 +5,7 @@ import FormContextProvider from './context/formContext'
 import Rotas from './routes/Rotas'
 import BtnFlutuante from './components/BtnFlutuante/BtnFlutuante'
 import { Helmet } from 'react-helmet';
+import ScrollToTop from './components/ScrollToTop/ScrollToTop'
 //import Popup from './components/Popup/Popup'
 export default function App() {
   return (
@@ -26,6 +27,7 @@ export default function App() {
         <Header />
         <Rotas />
         <Footer />
+        <ScrollToTop />
         <BtnFlutuante />
         
       </FormContextProvider>
