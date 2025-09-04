@@ -33,7 +33,7 @@ export default function ScrollToTop() {
                 className="scroll-top"
                 aria-label="Volver arriba"
                 >
-                    <ArrowUp size={40} />
+                    <ArrowUp size={45} />
                 </button>
                 )}
         </>
