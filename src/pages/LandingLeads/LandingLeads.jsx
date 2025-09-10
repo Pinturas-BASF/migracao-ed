@@ -28,9 +28,18 @@ export default function LandingLeads() {
         <p className="mb-6 text-3xl w-3/12">
           Recibí asesoría técnica y precios exclusivos para fabricantes registrados.
         </p>
-        <button className="bg-[#249FD2] text-white font-bold text-2xl px-6 py-3 shadow w-3/12">
-          Quiero registrarme y acceder a los beneficios
-        </button>
+<button className="
+  bg-[#249FD2] text-white font-bold
+  text-[clamp(1rem,2vw,1.5rem)]
+  px-[clamp(1rem,3vw,2rem)]
+  py-[clamp(0.5rem,1.5vw,1rem)]
+  w-[clamp(200px,40vw,600px)]
+  shadow
+">
+  Quiero registrarme y acceder a los beneficios
+</button>
+
+
       </div>
     </section>
 
