@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.backgroundblue{
+    background-color: #014B96;
+}
+.boulevard{
+    background-image: url('../../assets/banners/Boulevard.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}

@@ -4,11 +4,18 @@ import Header from './components/Header/Header'
 import FormContextProvider from './context/formContext'
 import Rotas from './routes/Rotas'
 import BtnFlutuante from './components/BtnFlutuante/BtnFlutuante'
-import { Helmet } from 'react-helmet';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop'
+import { Helmet } from 'react-helmet';
+import { Routes, Route } from 'react-router-dom'
+
+
+import LandingLeads from './pages/LandingLeads/LandingLeads'
+
+
 //import Popup from './components/Popup/Popup'
 export default function App() {
   return (
+    
     <>
       <Helmet>
         {/* Meta tags for SEO and social media sharing */}
@@ -23,14 +30,25 @@ export default function App() {
         </script>
         {/* End Google Tag Manager */}
         </Helmet>
-      <FormContextProvider>
-        <Header />
-        <Rotas />
-        <Footer />
-        <ScrollToTop />
-        <BtnFlutuante />
-        
-      </FormContextProvider>
+
+       <Routes>
+        { /* Ruta independiente */}
+        <Route path="/landing-leads" element={<LandingLeads />} />
+      
+       { /* Ruta principal que incluye Header, Footer y Subrutas */ } 
+       <Route 
+        path="/*"
+        element={  
+          <FormContextProvider>
+            <Header />
+            <Rotas />
+            <Footer />
+            <BtnFlutuante />
+            <ScrollToTop />
+          </FormContextProvider>
+       }
+        />
+      </Routes>
     </>
   )
 }
