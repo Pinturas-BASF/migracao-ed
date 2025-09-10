@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.ca7ce647.css",
-    "main.js": "/static/js/main.ad72449d.js",
+    "main.css": "/static/css/main.76f9084f.css",
+    "main.js": "/static/js/main.f8d96d53.js",
     "static/media/BannerDiscount.svg": "/static/media/BannerDiscount.dc3d06641c3e7b421e47.svg",
     "static/media/Banner-ED-AR.png": "/static/media/Banner-ED-AR.0574bba974e3b24e042e.png",
     "static/media/BannerDiscountMobile.svg": "/static/media/BannerDiscountMobile.7d827662c476b68707b1.svg",
@@ -18,11 +18,11 @@
     "static/media/Icon4.svg": "/static/media/Icon4.e38352388ee85092747ae27e3923d329.svg",
     "static/media/Icon1.svg": "/static/media/Icon1.3ff4ed45d92a134c02ed18b3ec4d2fa9.svg",
     "index.html": "/index.html",
-    "main.ca7ce647.css.map": "/static/css/main.ca7ce647.css.map",
-    "main.ad72449d.js.map": "/static/js/main.ad72449d.js.map"
+    "main.76f9084f.css.map": "/static/css/main.76f9084f.css.map",
+    "main.f8d96d53.js.map": "/static/js/main.f8d96d53.js.map"
   },
   "entrypoints": [
-    "static/css/main.ca7ce647.css",
-    "static/js/main.ad72449d.js"
+    "static/css/main.76f9084f.css",
+    "static/js/main.f8d96d53.js"
   ]
 }
