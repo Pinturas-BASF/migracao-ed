@@ -1,44 +1,87 @@
 import styles from './landing.css'
 import pinturas from '../../assets/banners/Pinturas.svg'
-import logo from '../../assets/banners/Logoinvert.svg'
-import boulevard from '../../assets/banners/Picture.svg'
+import pinturasMobile from '../../assets/banners/pinturasMobile.svg'
+import logoDesktop from '../../assets/banners/Logoinvert.svg'
+import logoMobile from '../../assets/banners/logoMobile.svg'
+import banner from '../../assets/banners/BannerLanding.svg'
+import bannerMobile from '../../assets/banners/BannerLandingMobile.svg'
 import CardsList from '../../components/CardList/CardList'
 
 export default function LandingLeads() {
   return (
     <>
     <section
-      className="relative w-full min-h-[420px] md:min-h-[520px] flex flex-col items-center bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: `url(${boulevard})` }}
+      className="relative w-full min-h-[420px] md:min-h-[520px] flex items-center"
     >
-
-      {/* Logo arriba derecha */}
-      <div className='w-full flex justify-end mt-16'>
+      <picture className="absolute inset-0 h-full w-full">
+        <source srcSet={banner} media="(min-width: 640px)" />
         <img
-          src={logo}
-          alt="Logo"
-          className="w-44 sm:w-36 md:w-96 h-auto drop-shadow"
+          src={bannerMobile}
+          alt="Banner"
+          className="h-full w-full object-cover"
         />
-      </div>
-      {/* Contenido alineado a la izquierda */}
-      <div className="relative z-20 w-full pl-32 pr-6 py-40 pt-4 text-white">
-        <h1 className="text-4xl md:text-7xl font-black tracking-[0.02em] leading-10 mb-3">
-          Tu aliado en <br/>cada formulación
-        </h1>
-        <p className="mb-6 text-3xl w-3/12">
-          Recibí asesoría técnica y precios exclusivos para fabricantes registrados.
-        </p>
-<button className="
-  bg-[#249FD2] text-white font-bold
-  text-[clamp(1rem,2vw,1.5rem)]
-  px-[clamp(1rem,3vw,2rem)]
-  py-[clamp(0.5rem,1.5vw,1rem)]
-  w-[clamp(200px,40vw,600px)]
-  shadow
-">
-  Quiero registrarme y acceder a los beneficios
-</button>
+      </picture>
 
+
+    <picture className="absolute top-6 right-0 drop-shadow">
+      <source media="(max-width: 767px)" srcSet={logoMobile} />
+      <img
+        src={logoDesktop}
+        alt="Logo"
+        loading="lazy"
+        className="w-44 sm:w-36 md:w-auto h-auto"
+      />
+    </picture>
+
+      <div className="absolute z-20
+        w-full
+        sm:w-[100%]
+        md:w-[50%]
+        xl:w-[45%]
+        flex flex-col text-white
+        items-center
+        h-full justify-end
+        xl:justify-center
+        ">
+
+        <div className='
+        text-center
+        xl:!text-start
+        mb-4'>
+        <h1 className="
+          text-4xl
+          md:text-7xl
+          mb-2
+          xl:mb-3 
+          font-black tracking-[0.02em] leading-10">
+          Tu aliado en <span className="block">cada formulación</span>
+        </h1>
+        <p className="
+        mb-2
+        xl:mb-6
+        text-[clamp(1.125rem,1.5vw,1.875rem)]
+        ">
+          Recibí asesoría técnica y precios exclusivos <span className="block">para fabricantes registrados.</span>
+        </p>
+
+        <button
+          className="
+            bg-[#249FD2] text-white font-bold shadow
+            text-[clamp(1rem,2vw,1.25rem)] 
+            px-[clamp(1rem,1.5vw,1.5rem)]
+            py-[clamp(0.50rem,1vw,0.75rem)]
+            w-[100%]
+
+            md:text-[clamp(1rem,1.5vw,1.375rem)] 
+            md:w-[clamp(220px,30vw,350px)]
+            
+            xl:text-[1.125rem] 
+            xl:w-[clamp(250px,25vw,500px)]
+          "
+        >
+          Quiero registrarme y acceder a los beneficios
+        </button>
+      </div>
 
       </div>
     </section>
@@ -51,31 +94,44 @@ export default function LandingLeads() {
       <div>
         <CardsList />
       </div>
-      <div className="text-center mt-10">
-        <button className="bg-[#014B96] text-white font-semibold px-6 py-3 shadow">Registrarme como cliente</button>
+      <div className="text-center mt-10 pl-2">
+        <button className="bg-[#014B96] text-white font-semibold py-3 px-8 shadow">Registrarme como cliente</button>
       </div>
     </div>
   </section>
 
 <section className="bg-[#F0F0F0] py-12 px-6 text-center w-full">
-  <p className="mx-auto font-medium text-[#014B96] text-2xl w-[37.333%]">
+  <p className="mx-auto font-medium text-[#014B96] text-xl md:text-2xl max-w-3xl">
     <strong>Al registrarte en nuestra plataforma, accedés a una experiencia exclusiva para fabricantes industriales. </strong>Comprás con el respaldo de la industria química más reconocida a nivel global, con atención personalizada, soporte técnico de primer nivel y condiciones preferenciales pensadas para potenciar tu competitividad.
   </p>
 </section>
 
-<section className="max-w-[90rem] mx-auto px-6 py-16 flex flex-col md:flex-row items-stretch">
-  <img src={pinturas} alt="Pinturas" className="shadow-md h-full object-cover flex-1" />
-  <div className="backgroundblue w-full p-11 flex flex-col justify-center flex-1 pr-36">
-    <h3 className="text-3xl font-black text-white mb-4">Creadores de logros</h3>
-    <p className="text-white text-xl">
-      Fabricantes de toda la región ya optimizan sus procesos con BASF.{" "}
-      <strong>
-        Nuestro compromiso es acompañarte con innovación, seguridad y soluciones
-        reales para que tu negocio crezca con base sólida.
-      </strong>
-    </p>
-  </div>
-</section>
+ <section className="max-w-[90rem] mx-auto px-4 sm:px-6 py-10 md:py-16">
+      <div className="flex flex-col md:flex-row items-stretch overflow-hidden shadow-md">
+        <picture className="w-full md:w-1/2">
+          <source media="(max-width: 767px)" srcSet={pinturasMobile} />
+          <img
+            src={pinturas}
+            alt="Pinturas"
+            loading="lazy"
+            className="w-full object-cover aspect-[4/3] md:aspect-auto"
+          />
+        </picture>
+
+        <div className="bg-[#014B96] w-full md:w-1/2 px-6 py-8 sm:px-8 sm:py-10 md:p-11 md:pr-36 flex flex-col justify-center text-center md:!text-left">
+          <h3 className="text-3xl sm:text-3xl font-black text-white mb-3 sm:mb-4">
+            Creadores de logros
+          </h3>
+          <p className="text-white text-xl px-3">
+            Fabricantes de toda la región ya optimizan sus procesos con BASF.{" "}
+            <strong>
+              Nuestro compromiso es acompañarte con innovación, seguridad y
+              soluciones reales para que tu negocio crezca con base sólida.
+            </strong>
+          </p>
+        </div>
+      </div>
+    </section>
 
 
 <section className="bg-white py-16 text-center flex flex-col items-center justify-center">
@@ -83,17 +139,17 @@ export default function LandingLeads() {
     <h2 className="text-4xl font-black mb-4 text-[#014B96]">
       ¿Listo para dar el próximo paso?
     </h2>
-    <p className="max-w-5xl mx-auto mb-6 text-gray-700 text-2xl">
+    <p className="max-w-5xl mx-auto mb-6 text-gray-700 text-xl">
       <strong>Completá el formulario y accedé a condiciones exclusivas para fabricantes industriales.{" "}</strong>Nuestro equipo se pondrá en contacto para ayudarte a aprovechar al máximo la plataforma.
     </p>
-    <button className="bg-[#014B96] text-white font-semibold px-6 py-3 shadow">Quiero registrarme</button>
+    <button className="bg-[#014B96] text-white font-semibold w-3/4 md:w-1/4 px-6 py-3 shadow text-xl md:text-base">Quiero registrarme</button>
   </div>
 </section>
 
-<footer className="backgroundblue text-white py-6 text-sm">
-  <div className="max-w-7xl text-lg mx-auto flex flex-col md:flex-row justify-between items-center px-6">
+<footer className="bg-[#014B96] text-white py-6 text-sm">
+  <div className="max-w-7xl text-xl mx-auto flex flex-col md:flex-row justify-between items-center px-6">
     <p>Copyright © BASF SA 2025</p>
-    <a href="#" className="underline hover:text-gray-200">Política de Privacidad</a>
+    <a href="#" className="hover:text-gray-200">Política de Privacidad</a>
   </div>
 </footer>
 

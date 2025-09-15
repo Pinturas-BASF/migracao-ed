@@ -10,7 +10,7 @@ export const cardsData = [
         highlight: "internacional, con certificaciones y respaldo BASF.",
         image: icon1,
         size: "w-11 h-11",
-        padding: "pl-11 pr-11",
+        padding: "px-6 md:px-14",
     },
     {
         id: 2,
@@ -18,7 +18,7 @@ export const cardsData = [
         highlight: "sin distribuidores",
         image: icon2,
         size: "w-14 h-11",
-        padding: "pl-20 pr-20",
+        padding: "px-12 md:px-20",
     },
     {
         id: 3,
@@ -26,7 +26,7 @@ export const cardsData = [
         highlight: "sin cargo para mejorar tus formulaciones",
         image: icon3,
         size: "w-11 h-11",
-        padding: "px-[2.95rem]",
+        padding: "px-[2rem] md:px-[2.95rem]",
     },
     {
         id: 4,
@@ -34,6 +34,6 @@ export const cardsData = [
         highlight: "exposiciones y fichas técnicas",
         image: icon4,
         size: "w-11 h-11",
-        padding: "pl-5 pr-5",
+        padding: "px-2 md:px-5",
     },            
 ];
