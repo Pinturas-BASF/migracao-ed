@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.a56989a1.css",
-    "main.js": "/static/js/main.0bbf860a.js",
+    "main.css": "/static/css/main.e477d0b6.css",
+    "main.js": "/static/js/main.7ad3f0f9.js",
     "static/media/BannerDiscount.svg": "/static/media/BannerDiscount.dc3d06641c3e7b421e47.svg",
     "static/media/Banner-ED-AR.png": "/static/media/Banner-ED-AR.0574bba974e3b24e042e.png",
     "static/media/BannerDiscountMobile.svg": "/static/media/BannerDiscountMobile.7d827662c476b68707b1.svg",
@@ -20,11 +20,12 @@
     "static/media/Icon4.svg": "/static/media/Icon4.e38352388ee85092747ae27e3923d329.svg",
     "static/media/Icon1.svg": "/static/media/Icon1.3ff4ed45d92a134c02ed18b3ec4d2fa9.svg",
     "index.html": "/index.html",
-    "main.a56989a1.css.map": "/static/css/main.a56989a1.css.map",
-    "main.0bbf860a.js.map": "/static/js/main.0bbf860a.js.map"
+    "static/media/IconInstagram.svg": "/static/media/IconInstagram.ddc96b79f18dcaf01ebec8002ede6ec3.svg",
+    "main.e477d0b6.css.map": "/static/css/main.e477d0b6.css.map",
+    "main.7ad3f0f9.js.map": "/static/js/main.7ad3f0f9.js.map"
   },
   "entrypoints": [
-    "static/css/main.a56989a1.css",
-    "static/js/main.0bbf860a.js"
+    "static/css/main.e477d0b6.css",
+    "static/js/main.7ad3f0f9.js"
   ]
 }
