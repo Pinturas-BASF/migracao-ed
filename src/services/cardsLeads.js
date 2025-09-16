@@ -10,7 +10,7 @@ export const cardsData = [
         highlight: "internacional, con certificaciones y respaldo BASF.",
         image: icon1,
         size: "w-11 h-11",
-        padding: "px-6 md:px-14",
+        padding: "px-6 md:px-7 xl:px-14",
     },
     {
         id: 2,
@@ -18,7 +18,7 @@ export const cardsData = [
         highlight: "sin distribuidores",
         image: icon2,
         size: "w-14 h-11",
-        padding: "px-12 md:px-20",
+        padding: "px-12 md:px-14 xl:px-20",
     },
     {
         id: 3,

@@ -16,7 +16,7 @@ export default function CardsList() {
           <div
             key={card.id}
             className="
-              w-[260px] sm:w-[300px] shrink-0 snap-start
+              w-[var(--card-w)] shrink-0 snap-start
               md:w-auto md:shrink md:snap-none
             "
           >

@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './footer.module.css'
 import { Link } from 'react-router-dom'
 import Seller from '../../assets/Juan-Navarro.png'
+import igIcon from '../../assets/icons/IconInstagram.svg'
 
 export default function Footer() {
 
@@ -46,6 +47,9 @@ export default function Footer() {
                 <p>Copyright © BASF SA {ano}</p>
                 <Link to="/politica-privacidad">
                     <p><a rel="noreferrer">Política de Privacidad</a></p>
+                </Link>
+                <Link to="https://www.instagram.com/basf_ed_ccs/" target='_blank' rel="noopener noreferrer" className={styles.instagram}>
+                    <p><a rel="noreferrer" className="inline-flex items-center gap-2 hover:opacity-90"><img src={igIcon} alt='Logo de instagram' aria-hidden="true" className='w-5 h-5'/>¡Seguinos en Instagram!</a></p>
                 </Link>
             </div>
         </>

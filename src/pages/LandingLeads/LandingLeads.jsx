@@ -6,18 +6,20 @@ import logoMobile from '../../assets/banners/logoMobile.svg'
 import banner from '../../assets/banners/BannerLanding.svg'
 import bannerMobile from '../../assets/banners/BannerLandingMobile.svg'
 import CardsList from '../../components/CardList/CardList'
+import igIcon from '../../assets/icons/IconInstagram.svg'
 
 export default function LandingLeads() {
   return (
     <>
     <section
-      className="relative w-full min-h-[420px] md:min-h-[520px] flex items-center"
+      className="relative w-full min-h-[420px] md:min-h-[520px] flex items-center px-0"
     >
       <picture className="absolute inset-0 h-full w-full">
-        <source srcSet={banner} media="(min-width: 640px)" />
+        <source srcSet={banner} media="(min-width: 768px)" />
         <img
           src={bannerMobile}
           alt="Banner"
+          fetchpriority="high"
           className="h-full w-full object-cover"
         />
       </picture>
@@ -27,81 +29,97 @@ export default function LandingLeads() {
       <source media="(max-width: 767px)" srcSet={logoMobile} />
       <img
         src={logoDesktop}
-        alt="Logo"
-        loading="lazy"
+        alt="Logo de BASF"
+        fetchpriority="high"
         className="w-44 sm:w-36 md:w-auto h-auto"
       />
     </picture>
 
       <div className="absolute z-20
         w-full
-        sm:w-[100%]
-        md:w-[50%]
+        sm:w-full
+        md:w-[55%]
+        lg:w-[45%]
         xl:w-[45%]
+        2xl:w-[45%]
         flex flex-col text-white
         items-center
         h-full justify-end
+        md:justify-center
         xl:justify-center
         ">
 
         <div className='
         text-center
-        xl:!text-start
-        mb-4'>
-        <h1 className="
-          text-4xl
-          md:text-7xl
+        w-[92%] 
+        md:!text-start md:w-[90%] 
+        xl:!text-start xl:w-[90%]
+        2xl:!text-start 2xl:w-[90%] 
+        mb-4
+        '>
+        <div className='mx-auto w-fit'>
+          <h1 className="
+            text-4xl
+            md:text-4xl
+            lg:text-5xl
+            xl:text-6xl
+            2xl:text-7xl
+            mb-2
+            xl:mb-3 
+            font-black tracking-[0.02em] leading-10">
+            Tu aliado en <span className="block">cada formulación</span>
+          </h1>
+          <p className="
           mb-2
-          xl:mb-3 
-          font-black tracking-[0.02em] leading-10">
-          Tu aliado en <span className="block">cada formulación</span>
-        </h1>
-        <p className="
-        mb-2
-        xl:mb-6
-        text-[clamp(1.125rem,1.5vw,1.875rem)]
-        ">
-          Recibí asesoría técnica y precios exclusivos <span className="block">para fabricantes registrados.</span>
-        </p>
+          xl:mb-6
+          text-[clamp(1.125rem,1.5vw,1.875rem)]
+          ">
+            Recibí asesoría técnica y precios exclusivos <span className="block">para fabricantes registrados.</span>
+          </p>
 
-        <button
-          className="
-            bg-[#249FD2] text-white font-bold shadow
-            text-[clamp(1rem,2vw,1.25rem)] 
-            px-[clamp(1rem,1.5vw,1.5rem)]
-            py-[clamp(0.50rem,1vw,0.75rem)]
-            w-[100%]
+          <button
+            className="
+              bg-[#249FD2] text-white font-bold shadow
+              text-[clamp(0.85rem,2vw,1.25rem)] 
+              px-[clamp(1rem,1.5vw,1.5rem)]
+              py-[clamp(0.50rem,1vw,0.75rem)]
+              w-full
 
-            md:text-[clamp(1rem,1.5vw,1.375rem)] 
-            md:w-[clamp(220px,30vw,350px)]
-            
-            xl:text-[1.125rem] 
-            xl:w-[clamp(250px,25vw,500px)]
-          "
-        >
-          Quiero registrarme y acceder a los beneficios
-        </button>
+              md:text-[clamp(1rem,1.5vw,1.375rem)] 
+
+              
+              xl:text-lg 
+              xl:w-[clamp(450px,25vw,500px)]
+            "
+          >
+            Quiero registrarme y acceder a los beneficios
+          </button>
+        </div>
       </div>
 
       </div>
     </section>
 
-  <section className="bg-white py-16">
-    <div className="max-w-7xl mx-auto px-6 text-[#014B96]">
-      <h2 className="text-center text-4xl font-extrabold mb-12">
-        Lo que solo BASF puede ofrecerte
-      </h2>
-      <div>
-        <CardsList />
-      </div>
-      <div className="text-center mt-10 pl-2">
-        <button className="bg-[#014B96] text-white font-semibold py-3 px-8 shadow">Registrarme como cliente</button>
-      </div>
+<section className="bg-white py-16 [--card-w:260px] sm:[--card-w:300px]">
+  <div className="max-w-7xl mx-auto px-6 text-[#014B96]">
+    <h2 className="text-center text-4xl font-extrabold mb-12">
+      Lo que solo BASF puede ofrecerte
+    </h2>
+    <div>
+      <CardsList />
     </div>
-  </section>
+
+    <div className="mt-10">
+      <button className="w-[var(--card-w)] md:w-auto mx-auto block bg-[#014B96] text-white font-semibold py-3 px-8 shadow">
+        Registrarme como cliente
+      </button>
+    </div>
+  </div>
+</section>
+
 
 <section className="bg-[#F0F0F0] py-12 px-6 text-center w-full">
-  <p className="mx-auto font-medium text-[#014B96] text-xl md:text-2xl max-w-3xl">
+  <p className="mx-auto font-medium text-[#014B96] text-xl md:text-2xl max-w-4xl">
     <strong>Al registrarte en nuestra plataforma, accedés a una experiencia exclusiva para fabricantes industriales. </strong>Comprás con el respaldo de la industria química más reconocida a nivel global, con atención personalizada, soporte técnico de primer nivel y condiciones preferenciales pensadas para potenciar tu competitividad.
   </p>
 </section>
@@ -114,7 +132,7 @@ export default function LandingLeads() {
             src={pinturas}
             alt="Pinturas"
             loading="lazy"
-            className="w-full object-cover aspect-[4/3] md:aspect-auto"
+            className="w-full object-cover aspect-[4/3] md:aspect-auto h-full"
           />
         </picture>
 
@@ -147,9 +165,21 @@ export default function LandingLeads() {
 </section>
 
 <footer className="bg-[#014B96] text-white py-6 text-sm">
-  <div className="max-w-7xl text-xl mx-auto flex flex-col md:flex-row justify-between items-center px-6">
+  <div className="max-w-7xl text-xl mx-auto flex flex-col md:flex-row justify-between items-center px-6 gap-2">
     <p>Copyright © BASF SA 2025</p>
     <a href="#" className="hover:text-gray-200">Política de Privacidad</a>
+    <a
+      href="https://www.instagram.com/basf_ed_ccs/"
+      target='_blank'
+      rel="noopener noreferrer"
+      className="inline-flex items-center gap-2 hover:opacity-90"
+      aria-label="Seguinos en Instagram">
+    <img
+      src={igIcon}
+      alt='Logo de instagram'
+      aria-hidden="true"
+      className='w-5 h-5'
+    />¡Seguinos en Instagram!</a> 
   </div>
 </footer>
 
