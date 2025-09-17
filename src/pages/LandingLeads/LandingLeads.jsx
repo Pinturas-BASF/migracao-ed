@@ -11,94 +11,91 @@ import igIcon from '../../assets/icons/IconInstagram.svg'
 export default function LandingLeads() {
   return (
     <>
-    <section
-      className="relative w-full min-h-[420px] md:min-h-[520px] flex items-center px-0"
-    >
-      <picture className="absolute inset-0 h-full w-full">
-        <source srcSet={banner} media="(min-width: 768px)" />
-        <img
-          src={bannerMobile}
-          alt="Banner"
-          fetchpriority="high"
-          className="h-full w-full object-cover"
-        />
-      </picture>
-
-
-    <picture className="absolute top-6 right-0 drop-shadow">
-      <source media="(max-width: 767px)" srcSet={logoMobile} />
+<section
+  className="
+      relative w-full overflow-hidden
+    mx-auto max-w-[180rem]
+    h-[420px]               
+    md:h-[clamp(380px,30vw,520px)]  
+    flex items-center px-0
+  "
+>
+  <div aria-hidden className="absolute inset-0 -z-10">
+    <picture className="absolute inset-0 pointer-events-none select-none">
+      <source srcSet={banner} media="(min-width: 768px)" />
       <img
-        src={logoDesktop}
-        alt="Logo de BASF"
+        src={bannerMobile}
+        alt=""
         fetchpriority="high"
-        className="w-44 sm:w-36 md:w-auto h-auto"
+        draggable="false"
+        className="
+          h-full w-full object-cover
+          object-[40%_50%]
+        "
       />
     </picture>
 
-      <div className="absolute z-20
-        w-full
-        sm:w-full
-        md:w-[55%]
-        lg:w-[45%]
-        xl:w-[45%]
-        2xl:w-[45%]
-        flex flex-col text-white
-        items-center
-        h-full justify-end
-        md:justify-center
-        xl:justify-center
-        ">
+  </div>
 
-        <div className='
-        text-center
-        w-[92%] 
-        md:!text-start md:w-[90%] 
+  <picture className="absolute top-6 right-0 drop-shadow z-10">
+    <source media="(max-width: 767px)" srcSet={logoMobile} />
+    <img
+      src={logoDesktop}
+      alt="Logo de BASF"
+      fetchpriority="high"
+      className="w-44 sm:w-36 md:w-auto h-auto"
+    />
+  </picture>
+
+  <div
+    className="
+      relative z-20
+      w-full sm:w-full md:w-[50%] lg:w-[45%] xl:w-[45%] 2xl:w-[45%]
+      flex flex-col text-white items-center
+      h-full justify-end md:justify-center xl:justify-center
+    "
+  >
+    <div
+      className="
+        text-center w-[92%]
+        md:!text-start md:w-[90%]
         xl:!text-start xl:w-[90%]
-        2xl:!text-start 2xl:w-[90%] 
+        2xl:!text-start 2xl:w-[90%]
         mb-4
-        '>
-        <div className='mx-auto w-fit'>
-          <h1 className="
-            text-4xl
-            md:text-4xl
-            lg:text-5xl
-            xl:text-6xl
-            2xl:text-7xl
-            mb-2
-            xl:mb-3 
-            font-black tracking-[0.02em] leading-10">
-            Tu aliado en <span className="block">cada formulación</span>
-          </h1>
-          <p className="
-          mb-2
-          xl:mb-6
-          text-[clamp(1.125rem,1.5vw,1.875rem)]
-          ">
-            Recibí asesoría técnica y precios exclusivos <span className="block">para fabricantes registrados.</span>
-          </p>
-
-          <button
-            className="
-              bg-[#249FD2] text-white font-bold shadow
-              text-[clamp(0.85rem,2vw,1.25rem)] 
-              px-[clamp(1rem,1.5vw,1.5rem)]
-              py-[clamp(0.50rem,1vw,0.75rem)]
-              w-full
-
-              md:text-[clamp(1rem,1.5vw,1.375rem)] 
-
-              
-              xl:text-lg 
-              xl:w-[clamp(450px,25vw,500px)]
-            "
-          >
-            Quiero registrarme y acceder a los beneficios
-          </button>
-        </div>
+      "
+    >
+      <div className="mx-auto w-fit">
+        <h1 className="
+          text-4xl sm:text-2xl md:text-4xl lg:text-4xl
+          xl:text-5xl 2xl:text-6xl mb-2 xl:mb-3
+          font-black tracking-[0.02em] leading-10
+        ">
+          Tu aliado en <span className="block">cada formulación</span>
+        </h1>
+        <p className="
+          mb-2 xl:mb-6
+          text-base sm:text-sm md:text-lg lg:text-base xl:text-xl 2xl:text-2xl
+        ">
+          Recibí asesoría técnica y precios exclusivos <span className="block">para fabricantes registrados.</span>
+        </p>
+        <button
+          className="
+            bg-[#249FD2] text-white font-bold shadow w-full
+            text-sm px-4 py-2
+            sm:text-xs sm:px-4 sm:py-2
+            md:text-xs md:px-2 md:py-2.5 md:w-[20rem]
+            lg:text-[0.8rem] lg:px-6 lg:py-3 lg:w-[21rem]
+            xl:text-base  xl:px-6 xl:py-3  xl:w-[25rem]
+            2xl:text-xl 2xl:px-7 2xl:py-4 2xl:w-[31rem]
+          "
+        >
+          Quiero registrarme y acceder a los beneficios
+        </button>
       </div>
+    </div>
+  </div>
+</section>
 
-      </div>
-    </section>
 
 <section className="bg-white py-16 [--card-w:260px] sm:[--card-w:300px]">
   <div className="max-w-7xl mx-auto px-6 text-[#014B96]">
