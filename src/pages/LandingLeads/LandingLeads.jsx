@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import styles from './landing.css'
 import pinturas from '../../assets/banners/Pinturas.svg'
 import pinturasMobile from '../../assets/banners/pinturasMobile.svg'
@@ -7,8 +8,16 @@ import banner from '../../assets/banners/BannerLanding.svg'
 import bannerMobile from '../../assets/banners/BannerLandingMobile.svg'
 import CardsList from '../../components/CardList/CardList'
 import igIcon from '../../assets/icons/IconInstagram.svg'
+import LeadModal from '../../components/LeadModal/LeadModal.jsx'
 
 export default function LandingLeads() {
+  // estado para abrir/cerrar el modal
+  const [isLeadOpen, setIsLeadOpen] = useState(false);
+
+  // helper para abrir (por si luego querés registrar el origen del clic)
+  const openLead = () => setIsLeadOpen(true);
+  const closeLead = () => setIsLeadOpen(false);
+
   return (
     <>
 <section
@@ -54,6 +63,7 @@ export default function LandingLeads() {
       flex flex-col text-white items-center
       h-full justify-end md:justify-center xl:justify-center
     "
+    
   >
     <div
       className="
@@ -79,6 +89,7 @@ export default function LandingLeads() {
           Recibí asesoría técnica y precios exclusivos <span className="block">para fabricantes registrados.</span>
         </p>
         <button
+          onClick={openLead}
           className="
             bg-[#249FD2] text-white font-bold shadow w-full
             text-sm px-4 py-2
@@ -107,7 +118,10 @@ export default function LandingLeads() {
     </div>
 
     <div className="mt-10">
-      <button className="w-[var(--card-w)] md:w-auto mx-auto block bg-[#014B96] text-white font-semibold py-3 px-8 shadow">
+      <button
+        onClick={openLead}
+        className="w-[var(--card-w)] md:w-auto mx-auto block bg-[#014B96] text-white font-semibold py-3 px-8 shadow"
+      >
         Registrarme como cliente
       </button>
     </div>
@@ -157,7 +171,12 @@ export default function LandingLeads() {
     <p className="max-w-5xl mx-auto mb-6 text-gray-700 text-xl">
       <strong>Completá el formulario y accedé a condiciones exclusivas para fabricantes industriales.{" "}</strong>Nuestro equipo se pondrá en contacto para ayudarte a aprovechar al máximo la plataforma.
     </p>
-    <button className="bg-[#014B96] text-white font-semibold w-3/4 md:w-1/4 px-6 py-3 shadow text-xl md:text-base">Quiero registrarme</button>
+    <button
+      onClick={openLead}
+      className="bg-[#014B96] text-white font-semibold w-3/4 md:w-1/4 px-6 py-3 shadow text-xl md:text-base"
+    >
+      Quiero registrarme
+    </button>
   </div>
 </section>
 
@@ -180,6 +199,8 @@ export default function LandingLeads() {
   </div>
 </footer>
 
+{/* Modal montado una sola vez */}
+<LeadModal isOpen={isLeadOpen} onClose={closeLead} />
     </>
   )
 }

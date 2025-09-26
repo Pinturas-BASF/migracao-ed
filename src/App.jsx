@@ -7,7 +7,7 @@ import BtnFlutuante from './components/BtnFlutuante/BtnFlutuante'
 import ScrollToTop from './components/ScrollToTop/ScrollToTop'
 import { Helmet } from 'react-helmet';
 import { Routes, Route } from 'react-router-dom'
-
+import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 
 import LandingLeads from './pages/LandingLeads/LandingLeads'
 
@@ -17,6 +17,7 @@ export default function App() {
   return (
     
     <>
+
       <Helmet>
         {/* Meta tags for SEO and social media sharing */}
         <script>
@@ -30,12 +31,18 @@ export default function App() {
         </script>
         {/* End Google Tag Manager */}
         </Helmet>
-
+        <GoogleReCaptchaProvider
+          reCaptchaKey={""}
+          scriptProps={{ async: true, defer: true }}
+        >
        <Routes>
+
         { /* Ruta independiente */}
         <Route path="/landing-leads" element={<LandingLeads />} />
-      
-       { /* Ruta principal que incluye Header, Footer y Subrutas */ } 
+ 
+       { /*
+       secret 6LdeENQrAAAAAOMI2qQlYC1L1eTKZOluLO6JTetb
+       Ruta principal que incluye Header, Footer y Subrutas */ } 
        <Route 
         path="/*"
         element={  
@@ -49,6 +56,7 @@ export default function App() {
        }
         />
       </Routes>
+           </GoogleReCaptchaProvider>
     </>
   )
 }
