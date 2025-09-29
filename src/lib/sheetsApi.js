@@ -1,18 +1,21 @@
-export const WEB_APP_SHEETS_API_KEY = "";
+export const WEB_APP_SHEETS_URL =
+  "https://script.google.com/macros/s/AKfycbxcY1l6ZbUq4X75rW8JPipmSAO0jmqTtOrlL32632nOgsEEIb_DHpW7gmdF25KYoekg/exec";
 
+export async function saveData(body) {
+  if (body?.website) return { ok: true, skippedByHoneypot: true };
 
-export async function saveData(body){
-  try{
-    await fetch(WEB_APP_SHEETS_API_KEY, {
+  try {
+    await fetch(WEB_APP_SHEETS_URL, {
       method: "POST",
-      headers: {
-        "Content-Type": "text/plain;charset=utf-8" ,
-      },
+      headers: { "Content-Type": "text/plain;charset=utf-8" }, 
       body: JSON.stringify(body),
-      mode: "no-cors",
+      mode: "no-cors",      
+      keepalive: true,      
+      cache: "no-store",
     });
-  } catch (error) {
-    console.error("Error saving data to Google Sheets:", error);
-    throw error;
-  }  
+    return { ok: true, blind: true };
+  } catch (err) {
+    console.error("Error saving data to Google Sheets:", err);
+    throw err;
+  }
 }
