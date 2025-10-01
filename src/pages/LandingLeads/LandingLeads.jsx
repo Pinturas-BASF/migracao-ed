@@ -7,8 +7,8 @@ import logoMobile from '../../assets/banners/logoMobile.svg'
 import banner from '../../assets/banners/BannerLanding.svg'
 import bannerMobile from '../../assets/banners/BannerLandingMobile.svg'
 import CardsList from '../../components/CardList/CardList'
-import igIcon from '../../assets/icons/IconInstagram.svg'
 import LeadModal from '../../components/LeadModal/LeadModal.jsx'
+import Footer from '../../components/LeadFooter/LeadFooter.jsx'
 
 export default function LandingLeads() {
   // estado para abrir/cerrar el modal
@@ -163,41 +163,24 @@ export default function LandingLeads() {
     </section>
 
 
-<section className="bg-white py-16 text-center flex flex-col items-center justify-center">
-  <div className='px-6 max-w-full'>
-    <h2 className="text-4xl font-black mb-4 text-[#014B96]">
-      ¿Listo para dar el próximo paso?
-    </h2>
-    <p className="max-w-5xl mx-auto mb-6 text-gray-700 text-xl">
-      <strong>Completá el formulario y accedé a condiciones exclusivas para fabricantes industriales.{" "}</strong>Nuestro equipo se pondrá en contacto para ayudarte a aprovechar al máximo la plataforma.
-    </p>
-    <button
-      onClick={openLead}
-      className="bg-[#014B96] text-white font-semibold w-3/4 md:w-1/4 px-6 py-3 shadow text-xl md:text-base"
-    >
-      Quiero registrarme
-    </button>
-  </div>
-</section>
+  <section className="bg-white py-16 text-center flex flex-col items-center justify-center">
+    <div className='px-6 max-w-full'>
+      <h2 className="text-4xl font-black mb-4 text-[#014B96]">
+        ¿Listo para dar el próximo paso?
+      </h2>
+      <p className="max-w-5xl mx-auto mb-6 text-gray-700 text-xl">
+        <strong>Completá el formulario y accedé a condiciones exclusivas para fabricantes industriales.{" "}</strong>Nuestro equipo se pondrá en contacto para ayudarte a aprovechar al máximo la plataforma.
+      </p>
+      <button
+        onClick={openLead}
+        className="bg-[#014B96] text-white font-semibold w-3/4 md:w-1/4 px-6 py-3 shadow text-xl md:text-base"
+      >
+        Quiero registrarme
+      </button>
+    </div>
+  </section>
 
-<footer className="bg-[#014B96] text-white py-6 text-sm">
-  <div className="max-w-7xl text-xl mx-auto flex flex-col md:flex-row justify-between items-center px-6 gap-2">
-    <p>Copyright © BASF SA 2025</p>
-    <a href="#" className="hover:text-gray-200">Política de Privacidad</a>
-    <a
-      href="https://www.instagram.com/basf_ed_ccs/"
-      target='_blank'
-      rel="noopener noreferrer"
-      className="inline-flex items-center gap-2 hover:opacity-90"
-      aria-label="Seguinos en Instagram">
-    <img
-      src={igIcon}
-      alt='Logo de instagram'
-      aria-hidden="true"
-      className='w-5 h-5'
-    />¡Seguinos en Instagram!</a> 
-  </div>
-</footer>
+  <Footer />
 
 {/* Modal montado una sola vez */}
 <LeadModal isOpen={isLeadOpen} onClose={closeLead} />
