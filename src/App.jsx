@@ -10,6 +10,7 @@ import { Routes, Route } from 'react-router-dom'
 
 import LandingLeads from './pages/LandingLeads/LandingLeads'
 import Gracias from './pages/LeadGracias/Gracias'
+import Terminos from './pages/LeadTerminos/Terminos'
 
 
 //import Popup from './components/Popup/Popup'
@@ -36,7 +37,7 @@ export default function App() {
         { /* Ruta independiente */}
         <Route path="/landing-leads" element={<LandingLeads />} />
         <Route path="/landing-leads/Gracias" element={<Gracias />} />
- 
+        <Route path="/landing-leads/Términos" element={<Terminos />} />
        { /*
        
        Ruta principal que incluye Header, Footer y Subrutas */ } 

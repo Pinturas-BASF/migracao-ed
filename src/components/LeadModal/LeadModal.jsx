@@ -249,7 +249,9 @@ useEffect(() => {
                   id="politicas"
                   className=" h-5 w-5"
                 />
-                <label htmlFor="politicas" className="text-sm md:text-base leading-5">
+                <label htmlFor="politicas" className="text-sm md:text-base leading-5 underline cursor-pointer" onClick={() => {
+                  window.open("/#/landing-leads/Términos", "_blank");
+                }}>
                   He leído y acepto los Términos y Condiciones
                 </label>
               </div>
