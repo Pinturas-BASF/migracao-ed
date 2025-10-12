@@ -16,12 +16,6 @@ import bannerMobile from '../../assets/banners/Banner-ED-AR-mobile.png'
 
 const banners = [
   {
-    id: 2,
-    type: 'component',
-    component: BannerDiscount,
-    alt: 'Banner de descuento',
-  },
-  {
     id: 1,
     type: 'image',
     image: banner,
