@@ -84,6 +84,14 @@
     gap: 10px;
 }
 
+.linkSubrayado {
+  text-decoration: underline;
+}
+.linkSubrayado:hover {
+  color: #004a96;
+  text-decoration: underline;
+}
+
 @media (min-width: 800px) {
 
     .formularioContainer {

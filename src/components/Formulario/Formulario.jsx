@@ -69,7 +69,17 @@ export default function Formulario({ abrirPorDefecto = false }) {
           </div>
 
           <div className={styles.inputFormsTermos}>
-            <label htmlFor="termosEcond">Acepto los términos y condiciones y la <Link to="/politica-privacidad"><a target='_blank' rel="noreferrer">políticas de privacidad</a></Link>.</label>
+           <label htmlFor="termosEcond">
+            <Link
+              to="/landing-leads/términos"
+              target="_blank"
+              rel="noreferrer"
+              className={styles.linkSubrayado}
+            >Acepto los términos y condiciones y las{" "}
+              políticas de privacidad
+            </Link>.
+          </label>
+
             <input type="checkbox" name="termosEcond" id='termosEcond' onChange={e => setTermos(e.target.checked)} />
           </div>
 
