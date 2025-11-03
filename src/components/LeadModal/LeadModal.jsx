@@ -5,6 +5,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { saveData } from "../../lib/sheetsApi";
 import ReCAPTCHA from "react-google-recaptcha";
 import closeIcon from '../../assets/icons/close.svg'
+import { is } from "zod/v4/locales";
 
 const FullSchema = z.object({
   nombre: z.string().min(2, "Nombre y Apellido"),
@@ -15,6 +16,7 @@ const FullSchema = z.object({
   ciudad: z.string().optional(),
   productosInteres: z.string().optional(),
   politicas: z.literal(true, { errorMap: () => ({ message: "Debes aceptar los Términos y Condiciones" }) }),
+  utm_source: z.string().optional(),
 });
 
 const redirectTo = () => {
@@ -42,10 +44,13 @@ export default function LeadModal({ isOpen, onClose }) {
       productosInteres: "",
       politicas: false,
       website: "", // honeypot
+      utm_source: "",
     },
     mode: "onChange",
     reValidateMode: "onChange",
   });
+
+  const { setValue } = methods;
 
   const {
     register,
@@ -99,9 +104,22 @@ useEffect(() => {
   return () => window.removeEventListener("resize", w);
 }, []);
 
-  if (!isOpen) return null;
+  useEffect(() => {
+    let params = new URLSearchParams(window.location.search);
+
+    if(!params.has('utm_source') && window.location.hash.includes('?')) {
+      const hashPart = window.location.hash.split("?")[1] || '';
+      params = new URLSearchParams(hashPart);
+    }
+
+    const utmFormUrl = params.get('utm_source') || '';
+    
+    setValue('utm_source', utmFormUrl, { shouldDirty: true});
+  }, [setValue]);
 
   return (
+    <>
+    {isOpen && (
     <div className="fixed inset-0 z-50 overflow-y-auto bg-black/40" aria-modal="true" role="dialog">
       <div className="min-h-full grid place-items-center py-6 px-3 md:py-10 md:px-4">
         <div
@@ -135,6 +153,11 @@ useEffect(() => {
                 className="hidden"
                 tabIndex={-1}
                 aria-hidden="true"
+              />
+
+              <input
+                type="hidden"
+                {...register("utm_source")}
               />
 
               <div className="text-center flex flex-col w-full gap-3">
@@ -292,5 +315,7 @@ useEffect(() => {
         </div>
       </div>
     </div>
+    )}
+    </>
   );
 }
