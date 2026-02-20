@@ -15,6 +15,10 @@
     text-align: center;
 }
 
+.grupoCategoria {
+    width: 90%;
+}
+
 .todosProdutos {
     display: flex;
     flex-direction: row;
@@ -67,6 +71,12 @@
     padding: 10px;
     width: 60%;
     background-color: #004a96;
+}
+
+.mensagemSemResultados {
+    color: #4b5563;
+    font-size: 15px;
+    margin: 0 0 20px 0;
 }
 
 @media (min-width: 800px) {

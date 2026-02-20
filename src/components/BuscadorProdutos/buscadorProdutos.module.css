@@ -1,0 +1,139 @@
+.buscadorContainer {
+    width: 100%;
+    max-width: 900px;
+    margin: 20px auto 30px auto;
+    padding: 0 10px;
+    position: relative;
+}
+
+.formBuscador {
+    width: 100%;
+}
+
+.labelBuscador {
+    display: block;
+    color: #004a96;
+    font-weight: bold;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+.inputBuscadorWrapper {
+    position: relative;
+}
+
+.iconeBusca {
+    color: #6b7280;
+    font-size: 18px;
+    left: 12px;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.inputBuscador {
+    width: 100%;
+    border: 1px solid black;
+    padding: 12px 40px 12px 40px;
+    font-size: 14px;
+    color: #1f2937;
+}
+
+.inputBuscador:focus {
+    outline: none;
+    border-color: #004a96;
+    box-shadow: 0 0 0 2px rgba(0, 74, 150, 0.15);
+}
+
+.btnLimpar {
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    border-radius: 999px;
+    color: #6b7280;
+    cursor: pointer;
+    display: flex;
+    font-size: 18px;
+    height: 28px;
+    justify-content: center;
+    padding: 0;
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 28px;
+}
+
+.btnLimpar:hover {
+    background-color: #eef3f8;
+    color: #004a96;
+}
+
+.painelSugestoes {
+    background-color: #fff;
+    border: 1px solid #d6d9de;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    z-index: 2;
+}
+
+.listaSugestoes {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-height: 220px;
+    overflow-y: auto;
+}
+
+.itemSugestao {
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    text-align: left;
+    padding: 12px;
+    cursor: pointer;
+    color: #1f2937;
+    font-size: 14px;
+}
+
+.itemSugestao:hover {
+    background-color: #F0F0F0;
+}
+
+.itemVerTodosContainer {
+    border-top: 1px solid #d6d9de;
+}
+
+.itemVerTodos {
+    width: 100%;
+    border: none;
+    color: #004a96;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    padding: 12px;
+    cursor: pointer;
+}
+
+.itemVerTodos:hover {
+    background-color: #F0F0F0;
+}
+
+@media (min-width: 800px) {
+    .buscadorContainer {
+        margin: 30px auto 40px auto;
+        padding: 0;
+    }
+
+    .painelSugestoes {
+        left: 0;
+        right: 0;
+    }
+
+    .inputBuscador {
+        font-size: 15px;
+    }
+}
