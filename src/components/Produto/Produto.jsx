@@ -14,7 +14,7 @@ export default function Produto({ filtro, nomeDoFiltro }) {
     () => [
       {
         chave: 'Emulsiones',
-        titulo: nomeDoFiltro === 'Industriales' ? '' : 'Emulsiones Polimérica',
+        titulo: 'Emulsiones polimericas',
       },
       {
         chave: 'Aditivos',
@@ -22,10 +22,10 @@ export default function Produto({ filtro, nomeDoFiltro }) {
       },
       {
         chave: 'Resinas',
-        titulo: nomeDoFiltro === 'Decorativas' ? '' : 'Resinas',
+        titulo: 'Resinas',
       },
     ],
-    [nomeDoFiltro]
+    []
   )
 
   useEffect(() => {
