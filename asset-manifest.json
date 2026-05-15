@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.53c17a36.css",
-    "main.js": "/static/js/main.deb260ba.js",
+    "main.css": "/static/css/main.a3464679.css",
+    "main.js": "/static/js/main.10399ac2.js",
     "static/media/BannerDiscount.svg": "/static/media/BannerDiscount.dc3d06641c3e7b421e47.svg",
     "static/media/Banner-ED-AR.png": "/static/media/Banner-ED-AR.0574bba974e3b24e042e.png",
     "static/media/BannerDiscountMobile.svg": "/static/media/BannerDiscountMobile.7d827662c476b68707b1.svg",
@@ -23,11 +23,11 @@
     "index.html": "/index.html",
     "static/media/IconInstagram.svg": "/static/media/IconInstagram.ddc96b79f18dcaf01ebec8002ede6ec3.svg",
     "static/media/close.svg": "/static/media/close.fae962cd0dc6f094917252bc5f334083.svg",
-    "main.53c17a36.css.map": "/static/css/main.53c17a36.css.map",
-    "main.deb260ba.js.map": "/static/js/main.deb260ba.js.map"
+    "main.a3464679.css.map": "/static/css/main.a3464679.css.map",
+    "main.10399ac2.js.map": "/static/js/main.10399ac2.js.map"
   },
   "entrypoints": [
-    "static/css/main.53c17a36.css",
-    "static/js/main.deb260ba.js"
+    "static/css/main.a3464679.css",
+    "static/js/main.10399ac2.js"
   ]
 }
