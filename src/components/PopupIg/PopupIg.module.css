@@ -1,0 +1,204 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.card {
+  position: relative;
+  width: min(321px, 92vw);
+  overflow: hidden;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.45);
+}
+
+/* Background images */
+.bg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.bgDesktop {
+  display: none;
+}
+
+/* Close button */
+.closeBtn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 10;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.closeBtn img {
+  width: 36px;
+  height: 36px;
+}
+
+/* Content overlay */
+.content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 28px 20px 24px 0;
+}
+
+.textGroup {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 12px;
+  margin-left: 1rem;
+  margin-bottom: 5rem;
+}
+
+.logo {
+  width: 180px;
+  height: auto;
+  margin-top: 8px;
+}
+
+.text {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: center;
+  margin: 0;
+  line-height: 0.8;
+}
+
+.text strong {
+  font-weight: 900;
+}
+
+.igBtn {
+  display: inline-block;
+  background: #249FD2;
+  color: #fff;
+  padding: 8px 16px;
+  font-weight: bold;
+  font-size: 0.75rem;
+  text-decoration: none;
+  margin-top: 0.25rem;
+}
+
+/* Tablet / laptop chico (640px – 1023px) */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .card {
+    width: min(620px, 90vw);
+  }
+
+  .bgMobile {
+    display: none;
+  }
+
+  .bgDesktop {
+    display: block;
+  }
+
+  .content {
+    padding: 28px 32px 32px 0;
+  }
+
+  .textGroup {
+    gap: 14px;
+    margin-bottom: 7rem;
+    margin-left: 2.25rem;
+  }
+
+  .logo {
+    width: 230px;
+    margin-top: 1.5rem;
+  }
+
+  .text {
+    font-size: 3rem;
+  }
+
+  .igBtn {
+    font-size: 0.9rem;
+    padding: 11px 22px;
+    margin-top: 0.35rem;
+  }
+
+  .closeBtn {
+    top: 14px;
+    right: 14px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .closeBtn img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Desktop (≥ 1024px) */
+@media (min-width: 1024px) {
+  .card {
+    width: min(900px, 90vw);
+  }
+
+  .bgMobile {
+    display: none;
+  }
+
+  .bgDesktop {
+    display: block;
+  }
+
+  .content {
+    padding: 36px 48px 40px 0;
+  }
+
+  .textGroup {
+    gap: 16px;
+    margin-bottom: 9.5rem;
+    margin-left: 3.5rem;
+  }
+
+  .logo {
+    width: 300px;
+    margin-top: 2rem;
+  }
+
+  .text {
+    font-size: 4.125rem;
+  }
+
+  .igBtn {
+    font-size: 1.05rem;
+    padding: 13px 28px;
+      margin-top: 0.5rem;
+  }
+
+  .closeBtn {
+    top: 16px;
+    right: 16px;
+    width: 44px;
+    height: 44px;
+  }
+
+  .closeBtn img {
+    width: 44px;
+    height: 44px;
+  }
+}

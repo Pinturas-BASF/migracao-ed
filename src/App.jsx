@@ -15,6 +15,7 @@ import Quiz from './pages/Quiz/Quiz'
 
 
 //import Popup from './components/Popup/Popup'
+import PopupIg from './components/PopupIg/PopupIg'
 export default function App() {
   return (
     
@@ -52,6 +53,7 @@ export default function App() {
             <Footer />
             <BtnFlutuante />
             <ScrollToTop />
+            <PopupIg />
           </FormContextProvider>
        }
         />
