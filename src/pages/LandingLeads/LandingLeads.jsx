@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import styles from './landing.css'
+import './landing.css'
 import pinturas from '../../assets/banners/Pinturas.svg'
 import pinturasMobile from '../../assets/banners/pinturasMobile.svg'
 import logoDesktop from '../../assets/banners/Logoinvert.svg'

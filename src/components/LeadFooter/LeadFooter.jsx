@@ -6,7 +6,7 @@ export default function LeadFooter() {
             <footer className="bg-[#014B96] text-white py-6 text-sm">
   <div className="max-w-7xl text-xl mx-auto flex flex-col md:flex-row justify-between items-center px-6 gap-2">
     <p>Copyright © BASF SA 2025</p>
-    <a href="#" className="hover:text-gray-200">Política de Privacidad</a>
+    <a href="/politica-privacidad" className="hover:text-gray-200">Política de Privacidad</a>
     <a
       href="https://www.instagram.com/basf_ed_ccs/"
       target='_blank'

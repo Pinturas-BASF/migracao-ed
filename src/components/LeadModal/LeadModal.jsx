@@ -5,7 +5,6 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { saveData } from "../../lib/sheetsApi";
 import ReCAPTCHA from "react-google-recaptcha";
 import closeIcon from '../../assets/icons/close.svg'
-import { is } from "zod/v4/locales";
 
 const FullSchema = z.object({
   nombre: z.string().min(2, "Nombre y Apellido"),

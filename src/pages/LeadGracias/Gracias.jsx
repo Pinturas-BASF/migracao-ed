@@ -1,5 +1,3 @@
-import react from 'react'
-
 import Header from '../../components/LeadHeader/LeadHeader'
 import LeadGraciasMessage from '../../components/LeadGracias/LeadGraciasMessage'
 import Footer from '../../components/LeadFooter/LeadFooter'
