@@ -58,7 +58,7 @@ const PopupIg = () => {
             <p className={styles.text}>¡Seguinos en</p>
             <p className={styles.text}><strong>Instagram!</strong></p>
             <a
-              href="https://www.instagram.com/basf_ed_ccs/"
+              href="https://www.instagram.com/basf_soluciones_para_pinturas/"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.igBtn}
