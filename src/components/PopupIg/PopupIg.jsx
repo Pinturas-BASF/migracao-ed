@@ -17,7 +17,6 @@ const PopupIg = () => {
 
     const showPopup = () => {
       setIsOpen(true);
-      localStorage.setItem(POPUP_KEY, 'true');
       cleanup();
     };
 
@@ -41,11 +40,20 @@ const PopupIg = () => {
 
   if (!isOpen) return null;
 
+  const markAsShown = () => {
+    localStorage.setItem(POPUP_KEY, 'true');
+  };
+
+  const closePopup = () => {
+    markAsShown();
+    setIsOpen(false);
+  };
+
   return (
-    <div className={styles.overlay} onClick={() => setIsOpen(false)}>
+    <div className={styles.overlay} onClick={closePopup}>
       <div className={styles.card} onClick={e => e.stopPropagation()}>
 
-        <button className={styles.closeBtn} onClick={() => setIsOpen(false)} aria-label="Cerrar">
+        <button className={styles.closeBtn} onClick={closePopup} aria-label="Cerrar">
           <img src={closeIcon} alt="" />
         </button>
 
@@ -62,6 +70,7 @@ const PopupIg = () => {
               target="_blank"
               rel="noopener noreferrer"
               className={styles.igBtn}
+              onClick={markAsShown}
             >
               Ir al Instagram
             </a>
